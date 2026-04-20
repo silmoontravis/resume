@@ -152,13 +152,18 @@
   }
 
   @media print {
-    body { padding: 20px 24px; max-width: 100%; font-size: 12px; }
-    .section-alt { margin: 0 -24px; padding: 16px 24px; }
-    h2 { margin-top: 24px; font-size: 18px; }
+    body { padding: 15px 20px; max-width: 100%; font-size: 11px; line-height: 1.5; }
+    .section-alt { margin: 0 -20px; padding: 12px 20px; page-break-inside: avoid; }
+    h2 { margin-top: 16px; font-size: 16px; page-break-after: avoid; }
     .job { page-break-inside: avoid; }
-    table { page-break-inside: avoid; }
-    .header-photo { width: 100px; height: 100px; }
+    table { page-break-inside: avoid; font-size: 11px; }
+    .header-photo { width: 80px; height: 80px; }
     .lang-switch { display: none; }
+    .stat-cards { page-break-inside: avoid; }
+    ul { page-break-inside: avoid; }
+    blockquote { page-break-inside: avoid; }
+    .header { page-break-inside: avoid; }
+    div[style*="grid"] { page-break-inside: avoid; }
   }
 </style>
 </head>
