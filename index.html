@@ -104,6 +104,23 @@
     background: #e8f0fe;
   }
 
+  .stat-cards {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 20px;
+  }
+  .stat-card {
+    text-align: center; padding: 16px 8px;
+    background: #f7f9fc; border-radius: 8px;
+    border-top: 3px solid #2c6fbb;
+  }
+  .stat-card .stat-number {
+    font-size: 28px; font-weight: 700; color: #2c6fbb;
+    display: block; margin-bottom: 4px;
+  }
+  .stat-card .stat-desc {
+    font-size: 12px; color: #4a5568; line-height: 1.5;
+  }
+
   @media print {
     body { padding: 20px 24px; max-width: 100%; font-size: 12px; }
     .section-alt { margin: 0 -24px; padding: 16px 24px; }
@@ -138,9 +155,56 @@
 
 <h2><span data-sc="个人简介" data-tc="個人簡介" data-en="Profile Summary">个人简介</span></h2>
 <div class="summary">
-  <p><span data-sc="7 年游戏产品管理经验，专注老虎机、棋牌与娱乐化游戏领域。从产品经理成长至项目总经理，完整经历过产品从 0 到上线到持续优化的全链路，曾三次从零搭建团队（最大规模 30 人），成功推动多款游戏产品在多国市场落地。" data-tc="7 年遊戲產品管理經驗，專注老虎機、棋牌與娛樂化遊戲領域。從產品經理成長至專案總經理，完整經歷過產品從 0 到上線到持續優化的全鏈路，曾三次從零搭建團隊（最大規模 30 人），成功推動多款遊戲產品在多國市場落地。" data-en="7 years of game product management experience, specializing in slots, card games, and entertainment gaming. Grew from Product Manager to General Manager, having gone through the full lifecycle of products from inception to launch to continuous optimization. Built teams from scratch three times (up to 30 people), successfully launching multiple game products across international markets.">7 年游戏产品管理经验，专注老虎机、棋牌与娱乐化游戏领域。从产品经理成长至项目总经理，完整经历过<strong>产品从 0 到上线到持续优化</strong>的全链路，曾三次从零搭建团队（最大规模 30 人），成功推动多款游戏产品在多国市场落地。</span></p>
-  <p><span data-sc="核心优势在于能同时驾驭产品逻辑、技术架构与运营策略——不仅能规划 RTP 模型与水池机制，也能拆解开发任务、管理版本节奏、对接品牌与运营方。擅长在资源有限、需求模糊的环境中，快速建立制度、理顺流程、交付成果。" data-tc="核心優勢在於能同時駕馭產品邏輯、技術架構與營運策略——不僅能規劃 RTP 模型與水池機制，也能拆解開發任務、管理版本節奏、對接品牌與營運方。擅長在資源有限、需求模糊的環境中，快速建立制度、理順流程、交付成果。" data-en="Core strength lies in the ability to simultaneously manage product logic, technical architecture, and operational strategy — not only planning RTP models and pool mechanisms, but also breaking down development tasks, managing release cadence, and liaising with brand and operations teams. Excels at rapidly establishing processes, streamlining workflows, and delivering results in resource-constrained, ambiguous environments.">核心优势在于<strong>能同时驾驭产品逻辑、技术架构与运营策略</strong>——不仅能规划 RTP 模型与水池机制，也能拆解开发任务、管理版本节奏、对接品牌与运营方。擅长在资源有限、需求模糊的环境中，快速建立制度、理顺流程、交付成果。</span></p>
+  <p><span data-sc="专注老虎机与娱乐化游戏 7 年，不只是产品经理——我能设计 RTP 算法、搭建自动化测试、从零组建 30 人团队，并带着现成的核心算法与团队资源加入。我的目标不是管产品，而是建产线。" data-tc="專注老虎機與娛樂化遊戲 7 年，不只是產品經理——我能設計 RTP 算法、搭建自動化測試、從零組建 30 人團隊，並帶著現成的核心算法與團隊資源加入。我的目標不是管產品，而是建產線。" data-en="7 years focused on slots and entertainment gaming. I'm not just a product manager — I design RTP algorithms, build automated testing systems, assemble 30-person teams from scratch, and bring proven core algorithms and ready-made team resources. My goal isn't to manage products — it's to build production lines.">专注老虎机与娱乐化游戏 7 年，不只是产品经理——我能设计 RTP 算法、搭建自动化测试、从零组建 30 人团队，并带着现成的核心算法与团队资源加入。<strong>我的目标不是管产品，而是建产线。</strong></span></p>
 </div>
+<div class="stat-cards">
+  <div class="stat-card">
+    <span class="stat-number"><span data-sc="7+" data-tc="7+" data-en="7+">7+</span></span>
+    <span class="stat-desc"><span data-sc="年游戏产品管理" data-tc="年遊戲產品管理" data-en="Years Game Product Management">年游戏产品管理</span></span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number"><span data-sc="3 次" data-tc="3 次" data-en="3x">3 次</span></span>
+    <span class="stat-desc"><span data-sc="从零搭建团队（最大 30 人）" data-tc="從零搭建團隊（最大 30 人）" data-en="Teams Built from Scratch (up to 30)">从零搭建团队（最大 30 人）</span></span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number"><span data-sc="多款" data-tc="多款" data-en="Multiple">多款</span></span>
+    <span class="stat-desc"><span data-sc="老虎机/棋牌已上线运营" data-tc="老虎機/棋牌已上線營運" data-en="Slots/Card Games Live in Production">老虎机/棋牌已上线运营</span></span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number"><span data-sc="BMM" data-tc="BMM" data-en="BMM">BMM</span></span>
+    <span class="stat-desc"><span data-sc="通过国际认证" data-tc="通過國際認證" data-en="International Certification Passed">通过国际认证</span></span>
+  </div>
+</div>
+
+<div class="section-alt" style="background:#eef3fb">
+<h2><span data-sc="我能带给公司的优势" data-tc="我能帶給公司的優勢" data-en="What I Bring to the Table">我能带给公司的优势</span></h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px">
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong><span data-sc="现成团队资源" data-tc="現成團隊資源" data-en="Ready-Made Team Resources">现成团队资源</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="拥有可随时调动的成熟团队网络，如需扩编可快速招齐产品、前端、后端、QA、美术等全职能角色，大幅缩短团队搭建周期。" data-tc="擁有可隨時調動的成熟團隊網絡，如需擴編可快速招齊產品、前端、後端、QA、美術等全職能角色，大幅縮短團隊搭建週期。" data-en="I have an established network of proven professionals. When scaling is needed, I can quickly recruit product, frontend, backend, QA, and art talent — significantly reducing team-building time.">拥有可随时调动的成熟团队网络，如需扩编可快速招齐产品、前端、后端、QA、美术等全职能角色，大幅缩短团队搭建周期。</span></p>
+  </div>
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong><span data-sc="AI 自动化开发体系" data-tc="AI 自動化開發體系" data-en="AI-Powered Development System">AI 自动化开发体系</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="已建立完整的 AI 辅助开发工作流（代码生成、自动化测试、素材生产、CI/CD 部署），能将传统开发效率提升 3-5 倍，以小团队实现大团队产出。" data-tc="已建立完整的 AI 輔助開發工作流（代碼生成、自動化測試、素材生產、CI/CD 部署），能將傳統開發效率提升 3-5 倍，以小團隊實現大團隊產出。" data-en="I've built a complete AI-assisted development workflow (code generation, automated testing, asset production, CI/CD deployment) that boosts development efficiency 3-5x, enabling small teams to deliver large-team output.">已建立完整的 AI 辅助开发工作流（代码生成、自动化测试、素材生产、CI/CD 部署），能将传统开发效率提升 3-5 倍，以小团队实现大团队产出。</span></p>
+  </div>
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong><span data-sc="核心算法与合规经验" data-tc="核心算法與合規經驗" data-en="Core Algorithms & Compliance">核心算法与合规经验</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="手上拥有经过实战验证的老虎机与捕鱼机核心算法（RTP 模型、水池机制、波动控制、监控系统），且具备通过 BMM 等国际检测机构认证的合规经验。" data-tc="手上擁有經過實戰驗證的老虎機與捕魚機核心算法（RTP 模型、水池機制、波動控制、監控系統），且具備通過 BMM 等國際檢測機構認證的合規經驗。" data-en="I possess battle-tested slot and fishing game core algorithms (RTP models, pool mechanisms, volatility control, monitoring systems) with proven experience passing BMM and other international certification audits.">手上拥有经过实战验证的老虎机与捕鱼机核心算法（RTP 模型、水池机制、波动控制、监控系统），且具备通过 BMM 等国际检测机构认证的合规经验。</span></p>
+  </div>
+</div>
+</div>
+
+<h2><span data-sc="成功上线游戏产品" data-tc="成功上線遊戲產品" data-en="Successfully Launched Game Products">成功上线游戏产品</span></h2>
+<table>
+  <thead><tr><th><span data-sc="产品" data-tc="產品" data-en="Product">产品</span></th><th><span data-sc="类型" data-tc="類型" data-en="Type">类型</span></th><th><span data-sc="角色" data-tc="角色" data-en="Role">角色</span></th><th><span data-sc="状态" data-tc="狀態" data-en="Status">状态</span></th></tr></thead>
+  <tbody>
+    <tr><td><span data-sc="老虎机产品线（多款）" data-tc="老虎機產品線（多款）" data-en="Slot Machine Product Line (Multiple)">老虎机产品线（多款）</span></td><td>Slot</td><td><span data-sc="项目总经理" data-tc="專案總經理" data-en="General Manager">项目总经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
+    <tr><td><span data-sc="捕鱼机系列（多款）" data-tc="捕魚機系列（多款）" data-en="Fishing Game Series (Multiple)">捕鱼机系列（多款）</span></td><td><span data-sc="捕鱼" data-tc="捕魚" data-en="Fishing">捕鱼</span></td><td><span data-sc="项目总经理" data-tc="專案總經理" data-en="General Manager">项目总经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
+    <tr><td>CityPoker</td><td><span data-sc="棋牌" data-tc="棋牌" data-en="Card Game">棋牌</span></td><td><span data-sc="产品负责人" data-tc="產品負責人" data-en="Product Owner">产品负责人</span></td><td><span data-sc="✅ 运行中" data-tc="✅ 運行中" data-en="✅ Running">✅ 运行中</span></td></tr>
+    <tr><td>58Poker</td><td><span data-sc="棋牌" data-tc="棋牌" data-en="Card Game">棋牌</span></td><td><span data-sc="产品负责人" data-tc="產品負責人" data-en="Product Owner">产品负责人</span></td><td><span data-sc="✅ 运行中" data-tc="✅ 運行中" data-en="✅ Running">✅ 运行中</span></td></tr>
+    <tr><td><span data-sc="博弈产品（巨甚/ST）" data-tc="博弈產品（巨甚/ST）" data-en="Gaming Products (Jushen/ST)">博弈产品（巨甚/ST）</span></td><td><span data-sc="Slot/棋牌" data-tc="Slot/棋牌" data-en="Slot/Card">Slot/棋牌</span></td><td><span data-sc="高级产品经理" data-tc="高級產品經理" data-en="Senior PM">高级产品经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
+  </tbody>
+</table>
 
 <div class="section-alt">
 <h2><span data-sc="技术背景优势" data-tc="技術背景優勢" data-en="Technical Background">技术背景优势</span></h2>
@@ -153,17 +217,6 @@
   <li><span data-sc="DevOps 理解：熟悉 CI/CD、Docker、Jenkins 部署流程，能评估从开发到上线的完整技术链路" data-tc="DevOps 理解：熟悉 CI/CD、Docker、Jenkins 部署流程，能評估從開發到上線的完整技術鏈路" data-en="DevOps Understanding: Familiar with CI/CD, Docker, and Jenkins deployment workflows, able to evaluate the full technical pipeline from development to production"><strong>DevOps 理解：</strong>熟悉 CI/CD、Docker、Jenkins 部署流程，能评估从开发到上线的完整技术链路</span></li>
 </ul>
 <blockquote><span data-sc="这意味着：我做产品决策时，不只考虑「用户要什么」，还能同时考虑「技术能不能做、要多久、风险在哪」。" data-tc="這意味著：我做產品決策時，不只考慮「使用者要什麼」，還能同時考慮「技術能不能做、要多久、風險在哪」。" data-en="This means: when making product decisions, I consider not only 'what users want', but also 'whether it's technically feasible, how long it takes, and where the risks lie'.">这意味着：我做产品决策时，不只考虑「用户要什么」，还能同时考虑「技术能不能做、要多久、风险在哪」。</span></blockquote>
-</div>
-
-<h2><span data-sc="敏捷开发实践" data-tc="敏捷開發實踐" data-en="Agile Development Practice">敏捷开发实践</span></h2>
-<p class="scrum-desc"><span data-sc="在多个项目中导入并实践敏捷开发方法，建立标准化流程提升团队效率：" data-tc="在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：" data-en="Introduced and practiced agile development methods across multiple projects, establishing standardized processes to improve team efficiency:">在多个项目中导入并实践敏捷开发方法，建立标准化流程提升团队效率：</span></p>
-<div class="scrum-grid">
-  <div class="scrum-card"><strong><span data-sc="Sprint 规划" data-tc="Sprint 規劃" data-en="Sprint Planning">Sprint 规划</span></strong><span data-sc="按双周迭代拆解需求，明确验收标准" data-tc="按雙週迭代拆解需求，明確驗收標準" data-en="Bi-weekly iterations to break down requirements with clear acceptance criteria">按双周迭代拆解需求，明确验收标准</span></div>
-  <div class="scrum-card"><strong><span data-sc="Milestone 管控" data-tc="Milestone 管控" data-en="Milestone Management">Milestone 管控</span></strong><span data-sc="多条产品线并行，里程碑追踪确保如期交付" data-tc="多條產品線並行，里程碑追蹤確保如期交付" data-en="Parallel product lines with milestone tracking to ensure on-time delivery">多条产品线并行，里程碑追踪确保如期交付</span></div>
-  <div class="scrum-card"><strong><span data-sc="标准化 PRD" data-tc="標準化 PRD" data-en="Standardized PRD">标准化 PRD</span></strong><span data-sc="User Story / Flow / Edge Case / 验收条件" data-tc="User Story / Flow / Edge Case / 驗收條件" data-en="User Story / Flow / Edge Case / Acceptance Criteria">User Story / Flow / Edge Case / 验收条件</span></div>
-  <div class="scrum-card"><strong><span data-sc="UAT 验收" data-tc="UAT 驗收" data-en="UAT Acceptance">UAT 验收</span></strong><span data-sc="定义测试案例，功能符合商业需求才放行" data-tc="定義測試案例，功能符合商業需求才放行" data-en="Defined test cases; features released only when meeting business requirements">定义测试案例，功能符合商业需求才放行</span></div>
-  <div class="scrum-card"><strong><span data-sc="需求评估机制" data-tc="需求評估機制" data-en="Requirement Evaluation">需求评估机制</span></strong><span data-sc="商业价值 × 开发成本 × 风险三维评分" data-tc="商業價值 × 開發成本 × 風險三維評分" data-en="Three-dimensional scoring: business value x development cost x risk">商业价值 × 开发成本 × 风险三维评分</span></div>
-  <div class="scrum-card"><strong><span data-sc="持续优化" data-tc="持續優化" data-en="Continuous Improvement">持续优化</span></strong><span data-sc="上线后数据观察与用户回馈驱动迭代" data-tc="上線後數據觀察與使用者回饋驅動迭代" data-en="Post-launch data observation and user feedback-driven iteration">上线后数据观察与用户回馈驱动迭代</span></div>
 </div>
 
 <div class="section-alt">
@@ -271,34 +324,15 @@
 </div>
 </div>
 
-<h2><span data-sc="成功上线游戏产品" data-tc="成功上線遊戲產品" data-en="Successfully Launched Game Products">成功上线游戏产品</span></h2>
-<table>
-  <thead><tr><th><span data-sc="产品" data-tc="產品" data-en="Product">产品</span></th><th><span data-sc="类型" data-tc="類型" data-en="Type">类型</span></th><th><span data-sc="角色" data-tc="角色" data-en="Role">角色</span></th><th><span data-sc="状态" data-tc="狀態" data-en="Status">状态</span></th></tr></thead>
-  <tbody>
-    <tr><td><span data-sc="老虎机产品线（多款）" data-tc="老虎機產品線（多款）" data-en="Slot Machine Product Line (Multiple)">老虎机产品线（多款）</span></td><td>Slot</td><td><span data-sc="项目总经理" data-tc="專案總經理" data-en="General Manager">项目总经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
-    <tr><td><span data-sc="捕鱼机系列（多款）" data-tc="捕魚機系列（多款）" data-en="Fishing Game Series (Multiple)">捕鱼机系列（多款）</span></td><td><span data-sc="捕鱼" data-tc="捕魚" data-en="Fishing">捕鱼</span></td><td><span data-sc="项目总经理" data-tc="專案總經理" data-en="General Manager">项目总经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
-    <tr><td>CityPoker</td><td><span data-sc="棋牌" data-tc="棋牌" data-en="Card Game">棋牌</span></td><td><span data-sc="产品负责人" data-tc="產品負責人" data-en="Product Owner">产品负责人</span></td><td><span data-sc="✅ 运行中" data-tc="✅ 運行中" data-en="✅ Running">✅ 运行中</span></td></tr>
-    <tr><td>58Poker</td><td><span data-sc="棋牌" data-tc="棋牌" data-en="Card Game">棋牌</span></td><td><span data-sc="产品负责人" data-tc="產品負責人" data-en="Product Owner">产品负责人</span></td><td><span data-sc="✅ 运行中" data-tc="✅ 運行中" data-en="✅ Running">✅ 运行中</span></td></tr>
-    <tr><td><span data-sc="博弈产品（巨甚/ST）" data-tc="博弈產品（巨甚/ST）" data-en="Gaming Products (Jushen/ST)">博弈产品（巨甚/ST）</span></td><td><span data-sc="Slot/棋牌" data-tc="Slot/棋牌" data-en="Slot/Card">Slot/棋牌</span></td><td><span data-sc="高级产品经理" data-tc="高級產品經理" data-en="Senior PM">高级产品经理</span></td><td><span data-sc="✅ 已上线" data-tc="✅ 已上線" data-en="✅ Live">✅ 已上线</span></td></tr>
-  </tbody>
-</table>
-
-<div class="section-alt" style="background:#eef3fb">
-<h2><span data-sc="我能带给公司的优势" data-tc="我能帶給公司的優勢" data-en="What I Bring to the Table">我能带给公司的优势</span></h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px">
-  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong><span data-sc="现成团队资源" data-tc="現成團隊資源" data-en="Ready-Made Team Resources">现成团队资源</span></strong>
-    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="拥有可随时调动的成熟团队网络，如需扩编可快速招齐产品、前端、后端、QA、美术等全职能角色，大幅缩短团队搭建周期。" data-tc="擁有可隨時調動的成熟團隊網絡，如需擴編可快速招齊產品、前端、後端、QA、美術等全職能角色，大幅縮短團隊搭建週期。" data-en="I have an established network of proven professionals. When scaling is needed, I can quickly recruit product, frontend, backend, QA, and art talent — significantly reducing team-building time.">拥有可随时调动的成熟团队网络，如需扩编可快速招齐产品、前端、后端、QA、美术等全职能角色，大幅缩短团队搭建周期。</span></p>
-  </div>
-  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong><span data-sc="AI 自动化开发体系" data-tc="AI 自動化開發體系" data-en="AI-Powered Development System">AI 自动化开发体系</span></strong>
-    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="已建立完整的 AI 辅助开发工作流（代码生成、自动化测试、素材生产、CI/CD 部署），能将传统开发效率提升 3-5 倍，以小团队实现大团队产出。" data-tc="已建立完整的 AI 輔助開發工作流（代碼生成、自動化測試、素材生產、CI/CD 部署），能將傳統開發效率提升 3-5 倍，以小團隊實現大團隊產出。" data-en="I've built a complete AI-assisted development workflow (code generation, automated testing, asset production, CI/CD deployment) that boosts development efficiency 3-5x, enabling small teams to deliver large-team output.">已建立完整的 AI 辅助开发工作流（代码生成、自动化测试、素材生产、CI/CD 部署），能将传统开发效率提升 3-5 倍，以小团队实现大团队产出。</span></p>
-  </div>
-  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong><span data-sc="核心算法与合规经验" data-tc="核心算法與合規經驗" data-en="Core Algorithms & Compliance">核心算法与合规经验</span></strong>
-    <p style="color:#555;margin-top:8px;font-size:13px"><span data-sc="手上拥有经过实战验证的老虎机与捕鱼机核心算法（RTP 模型、水池机制、波动控制、监控系统），且具备通过 BMM 等国际检测机构认证的合规经验。" data-tc="手上擁有經過實戰驗證的老虎機與捕魚機核心算法（RTP 模型、水池機制、波動控制、監控系統），且具備通過 BMM 等國際檢測機構認證的合規經驗。" data-en="I possess battle-tested slot and fishing game core algorithms (RTP models, pool mechanisms, volatility control, monitoring systems) with proven experience passing BMM and other international certification audits.">手上拥有经过实战验证的老虎机与捕鱼机核心算法（RTP 模型、水池机制、波动控制、监控系统），且具备通过 BMM 等国际检测机构认证的合规经验。</span></p>
-  </div>
-</div>
+<h2><span data-sc="敏捷开发实践" data-tc="敏捷開發實踐" data-en="Agile Development Practice">敏捷开发实践</span></h2>
+<p class="scrum-desc"><span data-sc="在多个项目中导入并实践敏捷开发方法，建立标准化流程提升团队效率：" data-tc="在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：" data-en="Introduced and practiced agile development methods across multiple projects, establishing standardized processes to improve team efficiency:">在多个项目中导入并实践敏捷开发方法，建立标准化流程提升团队效率：</span></p>
+<div class="scrum-grid">
+  <div class="scrum-card"><strong><span data-sc="Sprint 规划" data-tc="Sprint 規劃" data-en="Sprint Planning">Sprint 规划</span></strong><span data-sc="按双周迭代拆解需求，明确验收标准" data-tc="按雙週迭代拆解需求，明確驗收標準" data-en="Bi-weekly iterations to break down requirements with clear acceptance criteria">按双周迭代拆解需求，明确验收标准</span></div>
+  <div class="scrum-card"><strong><span data-sc="Milestone 管控" data-tc="Milestone 管控" data-en="Milestone Management">Milestone 管控</span></strong><span data-sc="多条产品线并行，里程碑追踪确保如期交付" data-tc="多條產品線並行，里程碑追蹤確保如期交付" data-en="Parallel product lines with milestone tracking to ensure on-time delivery">多条产品线并行，里程碑追踪确保如期交付</span></div>
+  <div class="scrum-card"><strong><span data-sc="标准化 PRD" data-tc="標準化 PRD" data-en="Standardized PRD">标准化 PRD</span></strong><span data-sc="User Story / Flow / Edge Case / 验收条件" data-tc="User Story / Flow / Edge Case / 驗收條件" data-en="User Story / Flow / Edge Case / Acceptance Criteria">User Story / Flow / Edge Case / 验收条件</span></div>
+  <div class="scrum-card"><strong><span data-sc="UAT 验收" data-tc="UAT 驗收" data-en="UAT Acceptance">UAT 验收</span></strong><span data-sc="定义测试案例，功能符合商业需求才放行" data-tc="定義測試案例，功能符合商業需求才放行" data-en="Defined test cases; features released only when meeting business requirements">定义测试案例，功能符合商业需求才放行</span></div>
+  <div class="scrum-card"><strong><span data-sc="需求评估机制" data-tc="需求評估機制" data-en="Requirement Evaluation">需求评估机制</span></strong><span data-sc="商业价值 × 开发成本 × 风险三维评分" data-tc="商業價值 × 開發成本 × 風險三維評分" data-en="Three-dimensional scoring: business value x development cost x risk">商业价值 × 开发成本 × 风险三维评分</span></div>
+  <div class="scrum-card"><strong><span data-sc="持续优化" data-tc="持續優化" data-en="Continuous Improvement">持续优化</span></strong><span data-sc="上线后数据观察与用户回馈驱动迭代" data-tc="上線後數據觀察與使用者回饋驅動迭代" data-en="Post-launch data observation and user feedback-driven iteration">上线后数据观察与用户回馈驱动迭代</span></div>
 </div>
 
 <div class="section-alt">
