@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陳柏宇（Maki）— 全端技術總監 / AI 解決方案架構師</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 48px;
+  }
+
+  h1 { font-size: 28px; color: #1a2744; font-weight: 700; margin: 0; }
+  h2 {
+    font-size: 22px; color: #1a2744; font-weight: 700;
+    border-bottom: 3px solid #2c6fbb;
+    padding-bottom: 6px; margin-bottom: 16px; margin-top: 36px;
+  }
+  h3 { font-size: 16px; color: #1a2744; font-weight: 600; margin-bottom: 4px; }
+
+  .header {
+    display: flex; align-items: center; gap: 32px;
+    padding-bottom: 28px; border-bottom: 2px solid #e0e6ed;
+  }
+  .header-photo {
+    width: 120px; height: 120px; border-radius: 50%;
+    object-fit: cover; object-position: center 15%;
+    flex-shrink: 0; border: 3px solid #2c6fbb;
+  }
+  .header-info { flex: 1; }
+  .header-title {
+    font-size: 18px; color: #2c6fbb; font-weight: 600; margin: 4px 0 8px 0;
+  }
+  .header-contact { font-size: 13px; color: #4a5568; line-height: 1.9; }
+
+  .section-alt {
+    background: #f7f9fc; margin: 0 -48px; padding: 24px 48px;
+  }
+
+  .summary p { margin-bottom: 12px; }
+
+  .tech-list { list-style: none; padding: 0; }
+  .tech-list li { padding: 6px 0; border-bottom: 1px solid #edf0f4; }
+  .tech-list li:last-child { border-bottom: none; }
+  .tech-list strong { color: #1a2744; }
+
+  .scrum-desc { margin-bottom: 16px; }
+  .scrum-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .scrum-card {
+    border-left: 4px solid #2c6fbb;
+    padding: 10px 14px;
+    background: #ffffff;
+    font-size: 13px;
+  }
+  .scrum-card strong { display: block; color: #1a2744; margin-bottom: 2px; }
+
+  .job { margin-bottom: 28px; }
+  .job-header { margin-bottom: 8px; }
+  .job-title { font-size: 16px; font-weight: 700; color: #1a2744; }
+  .job-company { font-size: 14px; color: #2c6fbb; font-weight: 600; }
+  .job-date { font-size: 13px; color: #718096; }
+  .job-sub { font-weight: 600; color: #1a2744; margin: 10px 0 4px 0; font-size: 14px; }
+  .job ul { padding-left: 20px; margin-bottom: 6px; }
+  .job li { margin-bottom: 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+  th { background: #1a2744; color: #fff; text-align: left; padding: 8px 12px; font-weight: 600; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e0e6ed; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+
+  .edu-item { margin-bottom: 8px; }
+
+  blockquote {
+    border-left: 4px solid #2c6fbb; padding: 10px 16px; margin: 12px 0;
+    background: #f7f9fc; font-size: 13px; color: #4a5568; font-style: italic;
+  }
+
+  .stat-cards {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 20px;
+  }
+  .stat-card {
+    text-align: center; padding: 16px 8px;
+    background: #f7f9fc; border-radius: 8px;
+    border-top: 3px solid #2c6fbb;
+  }
+  .stat-card .stat-number {
+    font-size: 28px; font-weight: 700; color: #2c6fbb;
+    display: block; margin-bottom: 4px;
+  }
+  .stat-card .stat-desc {
+    font-size: 12px; color: #4a5568; line-height: 1.5;
+  }
+
+  .project-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px;
+  }
+  .project-card {
+    background: #fff; border-radius: 8px; border-left: 4px solid #2c6fbb;
+    padding: 16px; box-shadow: 0 1px 4px rgba(44,111,187,0.07);
+  }
+  .project-card h3 { font-size: 15px; margin-bottom: 6px; }
+  .project-card .tag {
+    display: inline-block; background: #eef3fb; color: #2c6fbb;
+    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px;
+  }
+  .project-card p { font-size: 13px; color: #555; line-height: 1.6; }
+
+  @media (max-width: 768px) {
+    body { padding: 24px 16px; font-size: 13px; }
+    .header { flex-direction: column; text-align: center; gap: 16px; }
+    .header-info { text-align: center; }
+    .header-photo { width: 100px; height: 100px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    .stat-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .scrum-grid { grid-template-columns: 1fr !important; }
+    table { font-size: 12px; }
+    th, td { padding: 8px 10px; }
+    .section-alt { margin: 0 -16px; padding: 20px 16px; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px; }
+    .stat-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat-card { padding: 12px; }
+    .stat-card .stat-number { font-size: 24px; }
+    h1 { font-size: 20px; }
+    .header-photo { width: 80px; height: 80px; }
+    .section-alt { margin: 0 -12px; padding: 16px 12px; }
+  }
+
+  @media print {
+    body { padding: 15px 20px; max-width: 100%; font-size: 11px; line-height: 1.5; }
+    .section-alt { margin: 0 -20px; padding: 12px 20px; page-break-inside: avoid; }
+    h2 { margin-top: 16px; font-size: 16px; page-break-after: avoid; }
+    .job { page-break-inside: avoid; }
+    table { page-break-inside: avoid; font-size: 11px; }
+    .header-photo { width: 80px; height: 80px; }
+    .stat-cards { page-break-inside: avoid; }
+    ul { page-break-inside: avoid; }
+    blockquote { page-break-inside: avoid; }
+    .header { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="header">
+  <img class="header-photo" src="photo.jpg" alt="陳柏宇照片">
+  <div class="header-info">
+    <h1>陳柏宇（Maki）</h1>
+    <div class="header-title">全端技術總監 / AI 解決方案架構師</div>
+    <div class="header-contact" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:14px">
+      <div>+886 0912-560-693</div>
+      <div>bobe0809@gmail.com</div>
+      <div style="color:#666">台灣 ｜ 遠端工作可 ｜ 39 歲</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Summary ── -->
+<h2>個人簡介</h2>
+<div class="summary">
+  <p>擁有 17 年軟體開發與產品管理資歷，從 Java 後端工程師一路成長為技術總監與 AI 解決方案架構師。專長於帶領跨職能團隊完成複雜系統從零到上線，並自行建構一套 <strong>40+ 技能的 AI 自動化產線</strong>，覆蓋開發、測試、部署與內容全流程，可將傳統開發效率提升 3–5 倍。我的目標不是管產品，而是<strong>建產線、帶團隊、解決實際商業問題</strong>。</p>
+</div>
+<div class="stat-cards">
+  <div class="stat-card">
+    <span class="stat-number">7+</span>
+    <span class="stat-desc">年產品管理<br>經驗</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">3 次</span>
+    <span class="stat-desc">從零建立團隊<br>（最大 30 人）</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">多套</span>
+    <span class="stat-desc">系統已上線<br>持續運行中</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">AI 產線</span>
+    <span class="stat-desc">40+ 專業<br>AI Skill</span>
+  </div>
+</div>
+
+<!-- ── Core Strengths ── -->
+<div class="section-alt" style="background:#eef3fb;margin-top:36px">
+<h2 style="margin-top:0">我能帶給公司的優勢</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px">
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong>現成團隊資源</strong>
+    <p style="color:#555;margin-top:8px;font-size:13px">擁有成熟團隊網絡，可快速招齊產品、前端、後端、QA、設計等全職能角色，大幅縮短團隊搭建週期。</p>
+  </div>
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong>AI 產線系統</strong>
+    <p style="color:#555;margin-top:8px;font-size:13px">已建立完整的 AI 工廠體系（40+ 專業 Skill），覆蓋開發、測試、素材、部署全流程，能將傳統開發效率提升 3–5 倍。</p>
+  </div>
+  <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
+    <strong>複雜商業邏輯設計</strong>
+    <p style="color:#555;margin-top:8px;font-size:13px">具備實戰驗證的複雜商業邏輯演算法設計能力（分層規則引擎、動態定價、獎勵計算），可直接應用於新產品，縮短上線週期。</p>
+  </div>
+</div>
+</div>
+
+<!-- ── AI Pipeline ── -->
+<div style="margin-top:24px">
+<h2>AI 產線系統詳情</h2>
+<p style="color:#555;margin-bottom:12px;font-size:13px">這不是「會用 ChatGPT」——這是一套正在實際運作的 AI 工廠：</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>雙 AI Agent 協作</strong><br><span style="color:#666;font-size:12px">兩台 Claude Code 同時工作，平行推進任務</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>40+ AI Skill</strong><br><span style="color:#666;font-size:12px">QA、音效、美術、SEO、部署、文件一條龍</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>自動化 QA 體系</strong><br><span style="color:#666;font-size:12px">API 驗證 + 統計分析 + 回歸測試自動執行</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>AI 素材產線</strong><br><span style="color:#666;font-size:12px">美術 + 音效 + BGM 自動生成一條龍</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>知識庫系統</strong><br><span style="color:#666;font-size:12px">Second Brain + 跨裝置同步，零遺忘工作流</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>CI/CD 自動部署</strong><br><span style="color:#666;font-size:12px">Jenkins + Docker + 2 分鐘上線</span></div>
+</div>
+</div>
+
+<!-- ── Projects ── -->
+<h2>實際專案展示</h2>
+<div class="project-grid">
+  <div class="project-card">
+    <h3>HEY!BOSS（heyboss.com.tw）</h3>
+    <span class="tag">AI 自動建站平台</span>
+    <p>一鍵生成品牌官網，已產出 100+ 展示網站；整合 SEO 自動優化、Blog 自動發文、Google Analytics 追蹤，全流程 AI 驅動。</p>
+  </div>
+  <div class="project-card">
+    <h3>RMRS 扶輪社管理系統</h3>
+    <span class="tag">企業級系統</span>
+    <p>基於 RuoYi + Vue3 框架，涵蓋 14 個功能模組（會員、活動報名、出席、繳費等），支援中英 i18n 切換，已上線服務中。</p>
+  </div>
+  <div class="project-card">
+    <h3>CityPoker 撲克會員管理系統</h3>
+    <span class="tag">會員 / 賽事系統</span>
+    <p>完整賽事管理、獎金自動計算、會員積分、報名審核。從架構設計到上線部署全程負責，目前運行中。</p>
+  </div>
+  <div class="project-card">
+    <h3>58Poker 棋牌系統</h3>
+    <span class="tag">後台管理系統</span>
+    <p>全套棋牌後端管理系統，涵蓋帳務、風控、報表模組，擔任完整產品負責人角色，從零到上線交付。</p>
+  </div>
+</div>
+
+<!-- ── Technical Background ── -->
+<div class="section-alt">
+<h2>技術背景優勢</h2>
+<p style="margin-bottom: 12px; color: #4a5568;">多數產品經理只能寫需求文件，我能直接深入技術層：</p>
+<ul class="tech-list">
+  <li><strong>複雜商業邏輯演算法設計：</strong>親自設計多層級規則引擎、動態分層計算、觸發邏輯與閾值控制，不是「提需求給研發」，而是「自己就是設計者」</li>
+  <li><strong>程式碼級溝通：</strong>5 年 Java 後端開發經驗，能閱讀系統程式碼、追蹤資料流、精準評估技術可行性與開發工時，與工程團隊零翻譯成本</li>
+  <li><strong>自動化測試體系：</strong>親手搭建 Python/Node.js 自動化 QA 框架，涵蓋 API 正確性、統計驗證、回歸測試，不依賴 QA 團隊也能保證品質</li>
+  <li><strong>技術風險預判：</strong>能在需求階段識別技術瓶頸（並發、資料一致性、架構擴展性），避免開發中途踩坑</li>
+  <li><strong>DevOps 理解：</strong>熟悉 CI/CD、Docker、Jenkins 部署流程，能評估從開發到上線的完整技術鏈路</li>
+</ul>
+<blockquote>這意味著：我做產品決策時，不只考慮「使用者要什麼」，還能同時考慮「技術能不能做、要多久、風險在哪」。</blockquote>
+</div>
+
+<!-- ── Work Experience ── -->
+<div class="section-alt" style="margin-top:4px">
+<h2 style="page-break-before:always">工作經歷</h2>
+
+<div class="job" style="page-break-inside:avoid">
+  <div class="job-header">
+    <div class="job-title">台灣區專案總經理</div>
+    <div class="job-company">馬來西亞科技集團</div>
+    <div class="job-date">2025/02 - 2026/04 ｜ 管理 25 人團隊</div>
+  </div>
+  <p>負責多條系統產品線的整體規劃與團隊搭建，從零組建產品團隊並推動多個專案同步落地。</p>
+  <div class="job-sub">產品與系統設計</div>
+  <ul>
+    <li>主導核心系統機制設計：多層級規則引擎、動態分層計算、複雜商業邏輯演算法</li>
+    <li>設計差異化產品矩陣，協助品牌方建立清晰的產品定位</li>
+    <li>規劃保底機制與觸發邏輯，平衡用戶體驗與平台商業目標</li>
+  </ul>
+  <div class="job-sub">團隊建設與管理</div>
+  <ul>
+    <li>從 0 搭建 25 人團隊：職位規劃、JD 撰寫、面試評估、人員配置一手包辦</li>
+    <li>同時管理多條產品線，橫跨前端、後端、QA、企劃，明確里程碑與驗收標準</li>
+    <li>培養新進 PM/QA，建立標準化工作流程與思考框架</li>
+  </ul>
+  <div class="job-sub">效率與品質提升</div>
+  <ul>
+    <li>導入 Python/Node.js 自動化測試，建立可視化 Dashboard，QA 效率提升 40%</li>
+    <li>優化版本驗收流程，線上回歸 Bug 率降低 60%</li>
+  </ul>
+  <div class="job-sub">跨國協作</div>
+  <ul>
+    <li>擔任品牌方與技術端橋梁，將模糊需求轉化為可執行規格</li>
+    <li>管理台灣與海外團隊的遠端協作，確保多時區專案如期交付</li>
+  </ul>
+</div>
+
+<div class="job" style="page-break-inside:avoid">
+  <div class="job-header">
+    <div class="job-title">高級產品經理</div>
+    <div class="job-company">巨甚科技</div>
+    <div class="job-date">2024/05 - 2025/01</div>
+  </div>
+  <p>負責多款數位產品從 0→1 的完整產品規劃與落地執行。</p>
+  <ul>
+    <li>主導需求訪談、功能定義、流程設計與 MVP 拆解，產出標準化 PRD</li>
+    <li>使用 Axure 製作高保真原型，作為跨部門溝通標準</li>
+    <li>撰寫完整 PRD（User Story / Flow / Edge Case / 驗收條件），開發理解偏差降低 60%</li>
+    <li>規劃 Sprint/Milestone 版本節奏，協調前後端、QA 與營運排程</li>
+    <li>主導 UAT 驗收，定義測試案例並確保功能符合商業需求</li>
+    <li>追蹤進度與風險，提前識別時程衝突並提出調整方案</li>
+  </ul>
+</div>
+
+<div class="job" style="page-break-inside:avoid">
+  <div class="job-header">
+    <div class="job-title">高級產品經理</div>
+    <div class="job-company">ST 科技（台灣）</div>
+    <div class="job-date">2023/09 - 2024/04</div>
+  </div>
+  <p>負責數位產品的 Roadmap 規劃與跨部門整合。</p>
+  <ul>
+    <li>將商業目標拆解為可執行功能模組，建立需求評估機制（商業價值 × 開發成本 × 風險）</li>
+    <li>設計產品流程圖、Wireframe 與 Prototype，作為開發依據</li>
+    <li>主導跨部門會議，整合營運、技術、客服等單位意見</li>
+    <li>建立標準化 PRD 與驗收模板，團隊開發效率提升 30%</li>
+    <li>參與產品上線後數據觀察與使用者回饋，驅動持續優化</li>
+  </ul>
+</div>
+
+<div class="job" style="page-break-inside:avoid">
+  <div class="job-header">
+    <div class="job-title">創辦人 / CEO</div>
+    <div class="job-company">銀月數位顧問（台灣）</div>
+    <div class="job-date">2021/05 - 2023/09</div>
+  </div>
+  <p>自營系統開發公司，主導多款管理系統與數位產品的規劃與交付。</p>
+  <div class="job-sub">代表專案</div>
+  <ul>
+    <li>CityPoker 會員管理系統 — 賽事管理、獎金計算、會員積分，線上運行中</li>
+    <li>58Poker 棋牌系統 — 從架構設計到上線部署的完整產品負責人</li>
+    <li>調查局毒品管理系統（線上運行中）</li>
+    <li>永豐銀行財稅稽查系統（線上運行中）</li>
+    <li>舒芙亞連鎖美業客戶管理系統（線上運行中）</li>
+  </ul>
+  <p style="margin-top:6px;">管理：公司營運、團隊招募、專案管理、客戶溝通、新業務拓展</p>
+</div>
+
+<div class="job" style="page-break-inside:avoid">
+  <div class="job-header">
+    <div class="job-title">Java 後端工程師（5 年）</div>
+    <div class="job-company">台灣各大企業</div>
+    <div class="job-date">2016/01 - 2021/04</div>
+  </div>
+  <ul>
+    <li>金融業：中國信託、永豐商銀 ｜ 電信業：遠通集團、台灣大集團 ｜ 政府：健保案、軍方系統</li>
+    <li>負責後端系統架構設計與開發，主導多個企業級產品技術實現</li>
+    <li>完成從「純技術」到「技術管理」的轉型，為後續產品管理角色奠定基礎</li>
+  </ul>
+</div>
+</div>
+
+<!-- ── Agile ── -->
+<h2>敏捷開發實踐</h2>
+<p class="scrum-desc">在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：</p>
+<div class="scrum-grid">
+  <div class="scrum-card"><strong>Sprint 規劃</strong>按雙週迭代拆解需求，明確驗收標準</div>
+  <div class="scrum-card"><strong>Milestone 管控</strong>多條產品線並行，里程碑追蹤確保如期交付</div>
+  <div class="scrum-card"><strong>標準化 PRD</strong>User Story / Flow / Edge Case / 驗收條件</div>
+  <div class="scrum-card"><strong>UAT 驗收</strong>定義測試案例，功能符合商業需求才放行</div>
+  <div class="scrum-card"><strong>需求評估機制</strong>商業價值 × 開發成本 × 風險三維評分</div>
+  <div class="scrum-card"><strong>持續優化</strong>上線後數據觀察與使用者回饋驅動迭代</div>
+</div>
+
+<!-- ── Core Competency Table ── -->
+<div class="section-alt">
+<h2>核心能力對照</h2>
+<table>
+  <thead><tr><th>能力項目</th><th>我的具體經驗</th></tr></thead>
+  <tbody>
+    <tr><td>7 年以上產品管理</td><td>✅ 7 年（2019 至今），橫跨企業級與數位產品</td></tr>
+    <tr><td>複雜系統設計</td><td>✅ 多層規則引擎、演算法設計、動態計算邏輯全鏈路</td></tr>
+    <tr><td>團隊管理</td><td>✅ 三次從零搭建團隊（最大 30 人）</td></tr>
+    <tr><td>JIRA / Confluence / Trello</td><td>✅ 日常使用 + Axure / Miro / Figma</td></tr>
+    <tr><td>數據分析驅動</td><td>✅ 自建 Dashboard、使用者行為分析、A/B 測試設計</td></tr>
+    <tr><td>跨部門協調</td><td>✅ 跨國（台 / 菲 / 馬）、跨部門（研發 / 營運 / 品牌）</td></tr>
+    <tr><td>已上線案例</td><td>✅ HEY!BOSS / RMRS / CityPoker / 58Poker 多套運行中</td></tr>
+    <tr><td>敏捷開發</td><td>✅ Sprint / Milestone / PRD 標準化</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ── Tools ── -->
+<h2>工具</h2>
+<table>
+  <thead><tr><th>類別</th><th>工具</th></tr></thead>
+  <tbody>
+    <tr><td>專案管理</td><td>JIRA / Confluence / Trello / Notion</td></tr>
+    <tr><td>產品設計</td><td>Axure / Figma / Miro</td></tr>
+    <tr><td>數據分析</td><td>Google Sheets / SQL / 自建 Dashboard</td></tr>
+    <tr><td>協作</td><td>Slack / Telegram / Teams</td></tr>
+    <tr><td>技術理解</td><td>Java / Node.js / PostgreSQL / Docker / CI/CD</td></tr>
+    <tr><td>AI 工具</td><td>Claude Code / n8n / Obsidian Second Brain</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Education ── -->
+<div class="section-alt">
+<h2>教育 &amp; 證照</h2>
+<div class="edu-item">
+  <h3>亞東技術學院</h3>
+  <p>電子工程學系 ｜ 四技</p>
+</div>
+<div class="edu-item" style="margin-top:16px">
+  <h3>證照</h3>
+  <p>SCJP（Sun Certified Java Programmer）</p>
+</div>
+<div class="edu-item" style="margin-top:16px">
+  <h3>語言</h3>
+  <p>中文（母語）｜ 英文（工作溝通）｜ 閩南語</p>
+</div>
+</div>
+
+</body>
+</html>
