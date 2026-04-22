@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈柏宇（Maki）— GEO 优化师 / AI 搜索引擎优化专家</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    font-size: 14px; line-height: 1.7;
+    color: #2c3e50; background: #ffffff;
+    max-width: 900px; margin: 0 auto; padding: 40px 48px;
+  }
+  h1 { font-size: 28px; color: #1a2744; font-weight: 700; margin: 0; }
+  h2 {
+    font-size: 22px; color: #1a2744; font-weight: 700;
+    border-bottom: 3px solid #2c6fbb;
+    padding-bottom: 6px; margin-bottom: 16px; margin-top: 36px;
+  }
+  h3 { font-size: 16px; color: #1a2744; font-weight: 600; margin-bottom: 4px; }
+  .header {
+    display: flex; align-items: center; gap: 32px;
+    padding-bottom: 28px; border-bottom: 2px solid #e0e6ed;
+  }
+  .header-photo {
+    width: 120px; height: 120px; border-radius: 50%;
+    object-fit: cover; object-position: center 15%;
+    flex-shrink: 0; border: 3px solid #2c6fbb;
+  }
+  .header-info { flex: 1; }
+  .header-title { font-size: 18px; color: #2c6fbb; font-weight: 600; margin: 4px 0 8px 0; }
+  .header-contact { font-size: 13px; color: #4a5568; line-height: 1.9; }
+  .section-alt { background: #f7f9fc; margin: 0 -48px; padding: 24px 48px; }
+  .summary p { margin-bottom: 12px; }
+  .stat-cards {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px;
+  }
+  .stat-card {
+    text-align: center; padding: 16px 8px;
+    background: #f7f9fc; border-radius: 8px; border-top: 3px solid #2c6fbb;
+  }
+  .stat-card .stat-number { font-size: 26px; font-weight: 700; color: #2c6fbb; display: block; margin-bottom: 4px; }
+  .stat-card .stat-desc { font-size: 12px; color: #4a5568; line-height: 1.5; }
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 16px;
+  }
+  .card {
+    background: #fff; padding: 16px; border-radius: 8px;
+    border-left: 4px solid #2c6fbb; box-shadow: 0 1px 4px rgba(44,111,187,0.07);
+  }
+  .card strong { display: block; color: #1a2744; margin-bottom: 6px; font-size: 14px; }
+  .card p { font-size: 13px; color: #555; line-height: 1.6; }
+  .card .tag {
+    display: inline-block; background: #eef3fb; color: #2c6fbb;
+    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px;
+  }
+  .job { margin-bottom: 28px; }
+  .job-title { font-size: 16px; font-weight: 700; color: #1a2744; }
+  .job-company { font-size: 14px; color: #2c6fbb; font-weight: 600; }
+  .job-date { font-size: 13px; color: #718096; }
+  .job-sub { font-weight: 600; color: #1a2744; margin: 10px 0 4px 0; font-size: 14px; }
+  .job ul { padding-left: 20px; margin-bottom: 6px; }
+  .job li { margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+  th { background: #1a2744; color: #fff; text-align: left; padding: 8px 12px; font-weight: 600; }
+  td { padding: 8px 12px; border-bottom: 1px solid #e0e6ed; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+  blockquote {
+    border-left: 4px solid #2c6fbb; padding: 10px 16px; margin: 12px 0;
+    background: #f7f9fc; font-size: 13px; color: #4a5568; font-style: italic;
+  }
+  .edu-item { margin-bottom: 8px; }
+  @media (max-width: 768px) {
+    body { padding: 24px 16px; font-size: 13px; }
+    .header { flex-direction: column; text-align: center; gap: 16px; }
+    .header-info { text-align: center; }
+    .header-photo { width: 100px; height: 100px; }
+    h1 { font-size: 24px; } h2 { font-size: 18px; }
+    .stat-cards { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .section-alt { margin: 0 -16px; padding: 20px 16px; }
+    table { font-size: 12px; } th, td { padding: 8px 10px; }
+  }
+  @media (max-width: 480px) {
+    body { padding: 16px 12px; }
+    .stat-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat-card { padding: 12px; } .stat-card .stat-number { font-size: 22px; }
+    h1 { font-size: 20px; } .header-photo { width: 80px; height: 80px; }
+    .section-alt { margin: 0 -12px; padding: 16px 12px; }
+  }
+  @media print {
+    body { padding: 15px 20px; max-width: 100%; font-size: 11px; line-height: 1.5; }
+    .section-alt { margin: 0 -20px; padding: 12px 20px; page-break-inside: avoid; }
+    h2 { margin-top: 16px; font-size: 16px; page-break-after: avoid; }
+    .job { page-break-inside: avoid; }
+    table { page-break-inside: avoid; font-size: 11px; }
+    .header-photo { width: 80px; height: 80px; }
+    .stat-cards { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="header">
+  <img class="header-photo" src="photo.jpg" alt="陈柏宇照片">
+  <div class="header-info">
+    <h1>陈柏宇（Maki）</h1>
+    <div class="header-title">GEO 优化师 / AI 搜索引擎优化专家</div>
+    <div class="header-contact" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:14px">
+      <div>+886 0912-560-693</div>
+      <div>bobe0809@gmail.com</div>
+      <div style="color:#666">台湾 ｜ 远程工作可 ｜ 39 岁</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Summary ── -->
+<h2>个人简介</h2>
+<div class="summary">
+  <p>我不是在「学习」GEO——我已经在<strong>实际构建和运营 GEO 系统</strong>。拥有 17 年技术与产品管理背景，深度使用 Claude Code 双 AI Agent 架构（40+ 专业 Skill），自建 SEO 自动优化系统（接入 Google Search Console API 自动调整 meta 标签）、Blog 自动发布流水线（GitHub Actions + Google Indexing API），管理 100+ 网站的 SEO 监控。</p>
+  <p>我深刻理解传统搜索引擎与 AI 引擎（ChatGPT / Perplexity / Claude）在内容消费逻辑上的本质差异——AI 引擎更重视<strong>结构化权威内容、上下文完整性与可引用片段</strong>，而非单纯的关键词密度。我的内容策略从设计之初就面向 AI 可读性与可引用性，这正是 GEO 的核心。</p>
+</div>
+
+<div class="stat-cards">
+  <div class="stat-card">
+    <span class="stat-number">100+</span>
+    <span class="stat-desc">网站 SEO<br>管理与监控</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">40+</span>
+    <span class="stat-desc">AI Skill<br>自动化流水线</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">双 Agent</span>
+    <span class="stat-desc">Claude Code<br>并行工作系统</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">多语言</span>
+    <span class="stat-desc">中英内容<br>跨境市场运营</span>
+  </div>
+</div>
+
+<!-- ── Advantages ── -->
+<div class="section-alt" style="background:#eef3fb;margin-top:36px">
+<h2 style="margin-top:0">我能带给公司的优势</h2>
+<div class="card-grid">
+  <div class="card">
+    <strong>GEO 实战经验，不止理论</strong>
+    <p>已建立面向 AI 引擎的内容系统：结构化 FAQ、可引用摘要段落、权威信号植入。实测不同内容格式在 ChatGPT / Perplexity 中的被引用率，反向工程 AI 偏好规律。</p>
+  </div>
+  <div class="card">
+    <strong>SEO 自动化系统</strong>
+    <p>接入 Google Search Console API，自动识别低点击率页面并调整 meta title/description；GitHub Actions 驱动的 Blog 自动发布 + Google Indexing API 即时收录，全程无需人工干预。</p>
+  </div>
+  <div class="card">
+    <strong>AI 工具深度理解底层逻辑</strong>
+    <p>不只是「会用 ChatGPT」——自建双 Claude Code Agent 系统，深度理解 LLM 的 context window、token 权重、retrieval 机制，能将这些知识转化为 GEO 内容策略。</p>
+  </div>
+  <div class="card">
+    <strong>英文内容能力 + 跨境市场经验</strong>
+    <p>运营双语博客（中英），撰写面向 Web3 / 科技 / 海外市场的英文内容；管理台湾 / 菲律宾 / 马来西亚跨国团队，熟悉多语言市场内容差异。</p>
+  </div>
+</div>
+</div>
+
+<!-- ── AI Tools ── -->
+<h2>AI 工具深度使用</h2>
+<p style="color:#555;margin-bottom:14px;font-size:13px">这不是「会用 AI 工具」的泛泛表述——这是一套已在生产环境运行的 AI 内容与优化体系：</p>
+<div class="card-grid">
+  <div class="card">
+    <strong>双 Claude Code Agent 系统</strong>
+    <p>两台 Agent 并行工作，分别负责内容生成与 SEO 审查，互相 Review，产出质量高于单 Agent 50%+。</p>
+  </div>
+  <div class="card">
+    <strong>知识库 + Second Brain</strong>
+    <p>Obsidian 知识库跨设备同步，所有 SEO 实验数据、内容策略、GEO 测试结论都结构化存储，AI 可检索调用。</p>
+  </div>
+  <div class="card">
+    <strong>n8n 自动化工作流</strong>
+    <p>内容发布、SEO 监控报警、Google Search Console 数据拉取全部 n8n 自动化，减少人工操作 80%。</p>
+  </div>
+  <div class="card">
+    <strong>多模型协同策略</strong>
+    <p>熟悉 ChatGPT / Claude / Perplexity / Gemini 各自的内容偏好差异，针对不同 AI 引擎定制内容结构与权威信号。</p>
+  </div>
+</div>
+
+<!-- ── GEO/SEO Case Studies ── -->
+<h2>GEO / SEO 实战案例</h2>
+<div class="card-grid">
+  <div class="card">
+    <span class="tag">品牌建站 + SEO</span>
+    <strong>HeyBoss（heyboss.com.tw）</strong>
+    <p>一键生成品牌官网平台，已产出 100+ Demo 站；接入 Google Search Console API 自动优化 meta，Blog 系统 GitHub Actions 自动发布 + Google Indexing API 即时收录，全流程 AI 驱动。</p>
+  </div>
+  <div class="card">
+    <span class="tag">内容 SEO + 评测站</span>
+    <strong>rtp96.com 游戏评测站</strong>
+    <p>独立品牌内容站，专注游戏数据分析与深度评测；内容结构针对 AI 引擎可读性设计，包含结构化数据、权威摘要段、FAQ 模块，测试 AI 搜索引用效果。</p>
+  </div>
+  <div class="card">
+    <span class="tag">SEO 监控系统</span>
+    <strong>SEO Auto-Optimizer</strong>
+    <p>自建 SEO 自动监控系统（已封装为 Claude Skill）：自动识别流量下降页面、生成优化建议、批量更新 meta 标签，覆盖 100+ 站点的持续健康管理。</p>
+  </div>
+  <div class="card">
+    <span class="tag">内容自动化</span>
+    <strong>Blog 自动发布流水线</strong>
+    <p>AI 生成内容 → 自动审查 → GitHub Actions 触发发布 → Google Indexing API 主动推送收录，从内容生产到搜索引擎可见，全流程自动化，耗时从 2 小时压缩至 15 分钟。</p>
+  </div>
+</div>
+
+<!-- ── Work Experience ── -->
+<div class="section-alt" style="margin-top:4px">
+<h2 style="margin-top:0">工作经历</h2>
+
+<div class="job">
+  <div class="job-title">台湾区项目总经理</div>
+  <div class="job-company">马来西亚科技集团</div>
+  <div class="job-date">2025/02 - 2026/04 ｜ 管理 25 人跨国团队</div>
+  <div class="job-sub">内容与 SEO 相关职责</div>
+  <ul>
+    <li>主导多个数字产品官网的 SEO 策略规划，建立内容发布标准与关键词矩阵</li>
+    <li>构建面向跨境市场（台湾/菲律宾/马来西亚）的多语言内容策略</li>
+    <li>引入 AI 工具替代传统内容工作流，内容产出效率提升 3–5 倍</li>
+    <li>建立标准化 SEO 审查流程，覆盖技术 SEO、内容 SEO 与外链管理</li>
+  </ul>
+  <div class="job-sub">系统与自动化</div>
+  <ul>
+    <li>导入 Python/Node.js 自动化监控，建立可视化数据 Dashboard</li>
+    <li>跨国远程协作管理，确保多时区项目如期交付</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">高级产品经理</div>
+  <div class="job-company">巨甚科技</div>
+  <div class="job-date">2024/05 - 2025/01</div>
+  <ul>
+    <li>负责多款数字产品从 0→1 的完整规划与落地，主导需求分析与 PRD 编写</li>
+    <li>推动数据分析驱动的产品迭代，设计 A/B 测试方案并追踪关键转化指标</li>
+    <li>优化用户转化漏斗，结合搜索流量数据调整落地页内容结构</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">高级产品经理</div>
+  <div class="job-company">ST 科技（台湾）</div>
+  <div class="job-date">2023/09 - 2024/04</div>
+  <ul>
+    <li>负责数字产品 Roadmap 规划与跨部门整合</li>
+    <li>建立需求评估机制（商业价值 × 开发成本 × 风险三维评分）</li>
+    <li>参与上线后数据分析与用户反馈收集，驱动持续优化</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">创办人 / CEO</div>
+  <div class="job-company">银月数字顾问（台湾）</div>
+  <div class="job-date">2021/05 - 2023/09</div>
+  <ul>
+    <li>自营系统开发公司，主导多款管理系统与数字产品的规划与交付</li>
+    <li>代表项目：企业会员管理系统、政府机关数字化系统、金融科技系统，多套线上运行</li>
+    <li>管理：公司运营、团队招募、项目管理、客户沟通、新业务拓展</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-title">Java 后端工程师（5 年）</div>
+  <div class="job-company">台湾各大企业</div>
+  <div class="job-date">2016/01 - 2021/04</div>
+  <ul>
+    <li>金融业：中国信托、永丰商银 ｜ 电信业：远传集团、台湾大集团 ｜ 政府：健保案、军方系统</li>
+    <li>负责后端系统架构设计与开发，奠定技术理解基础，支撑后续内容与 SEO 的技术型决策能力</li>
+  </ul>
+</div>
+</div>
+
+<!-- ── Core Skills Table ── -->
+<div class="section-alt">
+<h2>核心能力对照（对标岗位要求）</h2>
+<table>
+  <thead><tr><th>岗位要求</th><th>我的具体经验</th></tr></thead>
+  <tbody>
+    <tr><td>SEO + AI 内容优化经验</td><td>✅ 自建 SEO Auto-Optimizer，管理 100+ 站点，实战 GEO 内容策略</td></tr>
+    <tr><td>理解搜索引擎 vs AI 引擎差异</td><td>✅ 实测 ChatGPT / Perplexity / Claude 内容偏好，反向工程 AI 引用规律</td></tr>
+    <tr><td>数据分析 / 逆向工程 AI 偏好</td><td>✅ Google Search Console API 数据驱动优化，A/B 测试内容结构</td></tr>
+    <tr><td>AI 工具深度使用 + 底层逻辑</td><td>✅ 双 Claude Code Agent 系统，40+ 专业 AI Skill，理解 LLM retrieval 机制</td></tr>
+    <tr><td>英文内容写作 / 多语言市场</td><td>✅ 双语博客运营，面向台湾/菲律宾/马来西亚跨境内容策略</td></tr>
+    <tr><td>Web3 / 科技 / 海外行业内容风格</td><td>✅ 科技产品内容运营，熟悉海外受众内容偏好与写作风格</td></tr>
+    <tr><td>内容自动化 / 发布流水线</td><td>✅ GitHub Actions + Google Indexing API，15 分钟完成从生成到收录</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ── Tools ── -->
+<h2>工具</h2>
+<table>
+  <thead><tr><th>类别</th><th>工具</th></tr></thead>
+  <tbody>
+    <tr><td>SEO / GEO</td><td>Google Search Console API / Google Analytics / Screaming Frog / Ahrefs</td></tr>
+    <tr><td>AI 引擎</td><td>Claude Code（双 Agent）/ ChatGPT / Perplexity / Gemini</td></tr>
+    <tr><td>内容自动化</td><td>GitHub Actions / Google Indexing API / n8n / Obsidian</td></tr>
+    <tr><td>数据分析</td><td>Google Sheets / SQL / 自建 Dashboard / Python</td></tr>
+    <tr><td>项目管理</td><td>JIRA / Notion / Trello / Confluence</td></tr>
+    <tr><td>技术栈</td><td>Node.js / Java / Docker / CI/CD / PostgreSQL</td></tr>
+  </tbody>
+</table>
+
+<!-- ── Education ── -->
+<div class="section-alt">
+<h2>教育 &amp; 证照</h2>
+<div class="edu-item">
+  <h3>亚东技术学院</h3>
+  <p>电子工程学系 ｜ 四技</p>
+</div>
+<div class="edu-item" style="margin-top:16px">
+  <h3>证照</h3>
+  <p>SCJP（Sun Certified Java Programmer）</p>
+</div>
+<div class="edu-item" style="margin-top:16px">
+  <h3>语言</h3>
+  <p>中文（母语）｜ 英文（工作沟通）｜ 闽南语</p>
+</div>
+</div>
+
+<blockquote style="margin-top:28px">
+  我的优势不只是「懂 SEO」，而是能把 GEO 策略、AI 工具逻辑和内容自动化系统整合为一套完整的运营体系——并且这套体系已经在真实项目中跑起来了。
+</blockquote>
+
+</body>
+</html>
