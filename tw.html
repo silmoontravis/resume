@@ -43,6 +43,22 @@
   }
   .header-contact { font-size: 13px; color: #4a5568; line-height: 1.9; }
 
+  .lang-switch {
+    display: flex; gap: 4px; margin-left: auto; align-self: flex-start;
+  }
+  .lang-switch button {
+    border: 1px solid #2c6fbb; background: #fff; color: #2c6fbb;
+    padding: 4px 12px; font-size: 12px; font-weight: 600;
+    border-radius: 14px; cursor: pointer; transition: all 0.2s;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  }
+  .lang-switch button.active {
+    background: #2c6fbb; color: #fff;
+  }
+  .lang-switch button:hover:not(.active) {
+    background: #e8f0fe;
+  }
+
   .section-alt {
     background: #f7f9fc; margin: 0 -48px; padding: 24px 48px;
   }
@@ -117,6 +133,8 @@
     font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px;
   }
   .project-card p { font-size: 13px; color: #555; line-height: 1.6; }
+  .project-card a { color: #2c6fbb; text-decoration: none; }
+  .project-card a:hover { text-decoration: underline; }
 
   @media (max-width: 768px) {
     body { padding: 24px 16px; font-size: 13px; }
@@ -130,6 +148,8 @@
     table { font-size: 12px; }
     th, td { padding: 8px 10px; }
     .section-alt { margin: 0 -16px; padding: 20px 16px; }
+    .lang-switch { position: static; margin-bottom: 16px; text-align: center; }
+    .lang-switch button { padding: 4px 12px; font-size: 12px; }
   }
 
   @media (max-width: 480px) {
@@ -149,6 +169,7 @@
     .job { page-break-inside: avoid; }
     table { page-break-inside: avoid; font-size: 11px; }
     .header-photo { width: 80px; height: 80px; }
+    .lang-switch { display: none; }
     .stat-cards { page-break-inside: avoid; }
     ul { page-break-inside: avoid; }
     blockquote { page-break-inside: avoid; }
@@ -163,271 +184,285 @@
   <img class="header-photo" src="photo.jpg" alt="陳柏宇照片">
   <div class="header-info">
     <h1>陳柏宇（Maki）</h1>
-    <div class="header-title">全端技術總監 / AI 解決方案架構師</div>
+    <div class="header-title"><span data-zh="全端技術總監 / AI 解決方案架構師" data-en="Full-Stack Technical Director / AI Solutions Architect">全端技術總監 / AI 解決方案架構師</span></div>
     <div class="header-contact" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:14px">
       <div>+886 0912-560-693</div>
       <div>bobe0809@gmail.com</div>
-      <div style="color:#666">台灣 ｜ 遠端工作可 ｜ 39 歲</div>
+      <div style="color:#666"><span data-zh="台灣 ｜ 遠端工作可 ｜ 39 歲" data-en="Taiwan ｜ Open to Remote ｜ Age 39">台灣 ｜ 遠端工作可 ｜ 39 歲</span></div>
     </div>
+  </div>
+  <div class="lang-switch">
+    <button onclick="setLang('zh')" id="btn-zh" class="active">繁中</button>
+    <button onclick="setLang('en')" id="btn-en">EN</button>
   </div>
 </div>
 
 <!-- ── Summary ── -->
-<h2>個人簡介</h2>
+<h2><span data-zh="個人簡介" data-en="Profile Summary">個人簡介</span></h2>
 <div class="summary">
-  <p>擁有 17 年軟體開發與產品管理資歷，從 Java 後端工程師一路成長為技術總監與 AI 解決方案架構師。專長於帶領跨職能團隊完成複雜系統從零到上線，並自行建構一套 <strong>40+ 技能的 AI 自動化產線</strong>，覆蓋開發、測試、部署與內容全流程，可將傳統開發效率提升 3–5 倍。我的目標不是管產品，而是<strong>建產線、帶團隊、解決實際商業問題</strong>。</p>
+  <p><span data-zh="擁有 17 年軟體開發與產品管理資歷，從 Java 後端工程師一路成長為技術總監與 AI 解決方案架構師。專長於帶領跨職能團隊完成複雜系統從零到上線，並自行建構一套 40+ 技能的 AI 自動化產線，覆蓋開發、測試、部署與內容全流程，可將傳統開發效率提升 3–5 倍。我的目標不是管產品，而是建產線、帶團隊、解決實際商業問題。" data-en="17 years of software development and product management experience, growing from a Java backend engineer to Technical Director and AI Solutions Architect. Specializes in leading cross-functional teams to deliver complex systems from zero to launch, with a self-built AI automation pipeline of 40+ skills covering development, testing, deployment, and content workflows — delivering 3–5x productivity gains over traditional approaches. My goal isn't to manage products — it's to build pipelines, lead teams, and solve real business problems.">擁有 17 年軟體開發與產品管理資歷，從 Java 後端工程師一路成長為技術總監與 AI 解決方案架構師。專長於帶領跨職能團隊完成複雜系統從零到上線，並自行建構一套 <strong>40+ 技能的 AI 自動化產線</strong>，覆蓋開發、測試、部署與內容全流程，可將傳統開發效率提升 3–5 倍。我的目標不是管產品，而是<strong>建產線、帶團隊、解決實際商業問題</strong>。</span></p>
 </div>
 <div class="stat-cards">
   <div class="stat-card">
     <span class="stat-number">7+</span>
-    <span class="stat-desc">年產品管理<br>經驗</span>
+    <span class="stat-desc"><span data-zh="年產品管理&lt;br&gt;經驗" data-en="Years Product&lt;br&gt;Management">年產品管理<br>經驗</span></span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">3 次</span>
-    <span class="stat-desc">從零建立團隊<br>（最大 30 人）</span>
+    <span class="stat-number"><span data-zh="3 次" data-en="3x">3 次</span></span>
+    <span class="stat-desc"><span data-zh="從零建立團隊（最大 30 人）" data-en="Teams Built from Scratch (up to 30)">從零建立團隊<br>（最大 30 人）</span></span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">多套</span>
-    <span class="stat-desc">系統已上線<br>持續運行中</span>
+    <span class="stat-number"><span data-zh="多套" data-en="Many">多套</span></span>
+    <span class="stat-desc"><span data-zh="系統已上線持續運行中" data-en="Live Systems Running in Production">系統已上線<br>持續運行中</span></span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">AI 產線</span>
-    <span class="stat-desc">40+ 專業<br>AI Skill</span>
+    <span class="stat-number"><span data-zh="AI 產線" data-en="AI Pipeline">AI 產線</span></span>
+    <span class="stat-desc"><span data-zh="40+ 專業 AI Skill" data-en="40+ Professional AI Skills">40+ 專業<br>AI Skill</span></span>
   </div>
 </div>
 
 <!-- ── Core Strengths ── -->
 <div class="section-alt" style="background:#eef3fb;margin-top:36px">
-<h2 style="margin-top:0">我能帶給公司的優勢</h2>
+<h2 style="margin-top:0"><span data-zh="我能帶給公司的優勢" data-en="What I Bring to the Table">我能帶給公司的優勢</span></h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px">
   <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong>現成團隊資源</strong>
-    <p style="color:#555;margin-top:8px;font-size:13px">擁有成熟團隊網絡，可快速招齊產品、前端、後端、QA、設計等全職能角色，大幅縮短團隊搭建週期。</p>
+    <strong><span data-zh="現成團隊資源" data-en="Ready-Made Team Network">現成團隊資源</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-zh="擁有成熟團隊網絡，可快速招齊產品、前端、後端、QA、設計等全職能角色，大幅縮短團隊搭建週期。" data-en="A proven team network that can rapidly staff full-function roles — product, frontend, backend, QA, and design — dramatically shortening team ramp-up time.">擁有成熟團隊網絡，可快速招齊產品、前端、後端、QA、設計等全職能角色，大幅縮短團隊搭建週期。</span></p>
   </div>
   <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong>AI 產線系統</strong>
-    <p style="color:#555;margin-top:8px;font-size:13px">已建立完整的 AI 工廠體系（40+ 專業 Skill），覆蓋開發、測試、素材、部署全流程，能將傳統開發效率提升 3–5 倍。</p>
+    <strong><span data-zh="AI 產線系統" data-en="AI Pipeline System">AI 產線系統</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-zh="已建立完整的 AI 工廠體系（40+ 專業 Skill），覆蓋開發、測試、素材、部署全流程，能將傳統開發效率提升 3–5 倍。" data-en="A fully operational AI factory (40+ professional skills) covering development, testing, asset production, and deployment — capable of delivering 3–5x the output of traditional development workflows.">已建立完整的 AI 工廠體系（40+ 專業 Skill），覆蓋開發、測試、素材、部署全流程，能將傳統開發效率提升 3–5 倍。</span></p>
   </div>
   <div style="background:#fff;padding:20px;border-radius:8px;border-left:3px solid #2c6fbb">
-    <strong>複雜商業邏輯設計</strong>
-    <p style="color:#555;margin-top:8px;font-size:13px">具備實戰驗證的複雜商業邏輯演算法設計能力（分層規則引擎、動態定價、獎勵計算），可直接應用於新產品，縮短上線週期。</p>
+    <strong><span data-zh="複雜商業邏輯設計" data-en="Complex Business Logic Design">複雜商業邏輯設計</span></strong>
+    <p style="color:#555;margin-top:8px;font-size:13px"><span data-zh="具備實戰驗證的複雜商業邏輯演算法設計能力（分層規則引擎、動態定價、獎勵計算），可直接應用於新產品，縮短上線週期。" data-en="Battle-tested expertise in complex business logic algorithm design — tiered rule engines, dynamic pricing, reward calculation — directly applicable to new products to accelerate time-to-market.">具備實戰驗證的複雜商業邏輯演算法設計能力（分層規則引擎、動態定價、獎勵計算），可直接應用於新產品，縮短上線週期。</span></p>
   </div>
 </div>
 </div>
 
 <!-- ── AI Pipeline ── -->
 <div style="margin-top:24px">
-<h2>AI 產線系統詳情</h2>
-<p style="color:#555;margin-bottom:12px;font-size:13px">這不是「會用 ChatGPT」——這是一套正在實際運作的 AI 工廠：</p>
+<h2><span data-zh="AI 產線系統詳情" data-en="AI Pipeline System Details">AI 產線系統詳情</span></h2>
+<p style="color:#555;margin-bottom:12px;font-size:13px"><span data-zh="這不是「會用 ChatGPT」——這是一套正在實際運作的 AI 工廠：" data-en="This isn't just &quot;knowing how to use ChatGPT&quot; — this is a fully operational AI factory in production:">這不是「會用 ChatGPT」——這是一套正在實際運作的 AI 工廠：</span></p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>雙 AI Agent 協作</strong><br><span style="color:#666;font-size:12px">兩台 Claude Code 同時工作，平行推進任務</span></div>
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>40+ AI Skill</strong><br><span style="color:#666;font-size:12px">QA、音效、美術、SEO、部署、文件一條龍</span></div>
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>自動化 QA 體系</strong><br><span style="color:#666;font-size:12px">API 驗證 + 統計分析 + 回歸測試自動執行</span></div>
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>AI 素材產線</strong><br><span style="color:#666;font-size:12px">美術 + 音效 + BGM 自動生成一條龍</span></div>
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>知識庫系統</strong><br><span style="color:#666;font-size:12px">Second Brain + 跨裝置同步，零遺忘工作流</span></div>
-  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong>CI/CD 自動部署</strong><br><span style="color:#666;font-size:12px">Jenkins + Docker + 2 分鐘上線</span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="雙 AI Agent 協作" data-en="Dual AI Agent Collaboration">雙 AI Agent 協作</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="兩台 Claude Code 同時工作，平行推進任務" data-en="Two Claude Code instances working simultaneously, advancing tasks in parallel">兩台 Claude Code 同時工作，平行推進任務</span></span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="40+ AI Skill" data-en="40+ AI Skills">40+ AI Skill</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="QA、音效、美術、SEO、部署、文件一條龍" data-en="End-to-end coverage: QA, audio, art, SEO, deployment, and documentation">QA、音效、美術、SEO、部署、文件一條龍</span></span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="自動化 QA 體系" data-en="Automated QA System">自動化 QA 體系</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="API 驗證 + 統計分析 + 回歸測試自動執行" data-en="API validation + statistical analysis + automated regression testing">API 驗證 + 統計分析 + 回歸測試自動執行</span></span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="AI 素材產線" data-en="AI Asset Pipeline">AI 素材產線</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="美術 + 音效 + BGM 自動生成一條龍" data-en="End-to-end automated generation: artwork, sound effects, and BGM">美術 + 音效 + BGM 自動生成一條龍</span></span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="知識庫系統" data-en="Knowledge Base System">知識庫系統</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="Second Brain + 跨裝置同步，零遺忘工作流" data-en="Second Brain + cross-device sync for a zero-loss workflow">Second Brain + 跨裝置同步，零遺忘工作流</span></span></div>
+  <div style="background:#f7f9fc;padding:14px;border-radius:8px;border-left:3px solid #2c6fbb"><strong><span data-zh="CI/CD 自動部署" data-en="CI/CD Auto-Deployment">CI/CD 自動部署</span></strong><br><span style="color:#666;font-size:12px"><span data-zh="Jenkins + Docker + 2 分鐘上線" data-en="Jenkins + Docker + 2-minute deployment to production">Jenkins + Docker + 2 分鐘上線</span></span></div>
 </div>
 </div>
 
 <!-- ── Projects ── -->
-<h2>實際專案展示</h2>
+<h2><span data-zh="實際專案展示" data-en="Project Showcase">實際專案展示</span></h2>
 <div class="project-grid">
   <div class="project-card">
-    <h3>HEY!BOSS（heyboss.com.tw）</h3>
-    <span class="tag">AI 自動建站平台</span>
-    <p>一鍵生成品牌官網，已產出 100+ 展示網站；整合 SEO 自動優化、Blog 自動發文、Google Analytics 追蹤，全流程 AI 驅動。</p>
+    <h3><span data-zh="HEY!BOSS（heyboss.com.tw）" data-en="HEY!BOSS (heyboss.com.tw)">HEY!BOSS（<a href="https://heyboss.com.tw" target="_blank">heyboss.com.tw</a>）</span></h3>
+    <span class="tag"><span data-zh="AI 自動建站平台" data-en="AI Website Builder Platform">AI 自動建站平台</span></span>
+    <p><span data-zh="一鍵生成品牌官網，已產出 100+ 展示網站；整合 SEO 自動優化、Blog 自動發文、Google Analytics 追蹤，全流程 AI 驅動。" data-en="One-click branded website generation with 100+ demo sites produced; integrates automated SEO optimization, AI blog publishing, and Google Analytics tracking — fully AI-driven end to end.">一鍵生成品牌官網，已產出 100+ 展示網站；整合 SEO 自動優化、Blog 自動發文、Google Analytics 追蹤，全流程 AI 驅動。</span></p>
   </div>
   <div class="project-card">
-    <h3>RMRS 扶輪社管理系統</h3>
-    <span class="tag">企業級系統</span>
-    <p>基於 RuoYi + Vue3 框架，涵蓋 14 個功能模組（會員、活動報名、出席、繳費等），支援中英 i18n 切換，已上線服務中。</p>
+    <h3><span data-zh="RMRS 扶輪社管理系統" data-en="RMRS Rotary Club Management System">RMRS 扶輪社管理系統</span></h3>
+    <span class="tag"><span data-zh="企業級系統" data-en="Enterprise System">企業級系統</span></span>
+    <p><span data-zh="基於 RuoYi + Vue3 框架，涵蓋 14 個功能模組（會員、活動報名、出席、繳費等），支援中英 i18n 切換，已上線服務中。" data-en="Built on RuoYi + Vue3, covering 14 functional modules (membership, event registration, attendance, payments, etc.) with full zh/en i18n support. Live in production.">基於 RuoYi + Vue3 框架，涵蓋 14 個功能模組（會員、活動報名、出席、繳費等），支援中英 i18n 切換，已上線服務中。</span></p>
   </div>
   <div class="project-card">
-    <h3>CityPoker 撲克會員管理系統</h3>
-    <span class="tag">會員 / 賽事系統</span>
-    <p>完整賽事管理、獎金自動計算、會員積分、報名審核。從架構設計到上線部署全程負責，目前運行中。</p>
+    <h3><span data-zh="CityPoker 撲克會員管理系統" data-en="CityPoker Member Management System">CityPoker 撲克會員管理系統</span></h3>
+    <span class="tag"><span data-zh="會員 / 賽事系統" data-en="Membership / Tournament System">會員 / 賽事系統</span></span>
+    <p><span data-zh="完整賽事管理、獎金自動計算、會員積分、報名審核。從架構設計到上線部署全程負責，目前運行中。" data-en="Full tournament management, automated prize calculation, member points, and registration approval. Owned end-to-end from architecture design to live deployment. Currently in operation.">完整賽事管理、獎金自動計算、會員積分、報名審核。從架構設計到上線部署全程負責，目前運行中。</span></p>
   </div>
   <div class="project-card">
-    <h3>58Poker 棋牌系統</h3>
-    <span class="tag">後台管理系統</span>
-    <p>全套棋牌後端管理系統，涵蓋帳務、風控、報表模組，擔任完整產品負責人角色，從零到上線交付。</p>
+    <h3><span data-zh="58Poker 棋牌系統" data-en="58Poker Card Game System">58Poker 棋牌系統</span></h3>
+    <span class="tag"><span data-zh="後台管理系統" data-en="Back-Office Management System">後台管理系統</span></span>
+    <p><span data-zh="全套棋牌後端管理系統，涵蓋帳務、風控、報表模組，擔任完整產品負責人角色，從零到上線交付。" data-en="Full-suite card game back-office management system covering finance, risk control, and reporting modules. Served as complete product owner, delivering from zero to launch.">全套棋牌後端管理系統，涵蓋帳務、風控、報表模組，擔任完整產品負責人角色，從零到上線交付。</span></p>
   </div>
 </div>
 
 <!-- ── Technical Background ── -->
 <div class="section-alt">
-<h2>技術背景優勢</h2>
-<p style="margin-bottom: 12px; color: #4a5568;">多數產品經理只能寫需求文件，我能直接深入技術層：</p>
+<h2><span data-zh="技術背景優勢" data-en="Technical Background">技術背景優勢</span></h2>
+<p style="margin-bottom: 12px; color: #4a5568;"><span data-zh="多數產品經理只能寫需求文件，我能直接深入技術層：" data-en="Most product managers can only write requirements. I go directly to the technical layer:">多數產品經理只能寫需求文件，我能直接深入技術層：</span></p>
 <ul class="tech-list">
-  <li><strong>複雜商業邏輯演算法設計：</strong>親自設計多層級規則引擎、動態分層計算、觸發邏輯與閾值控制，不是「提需求給研發」，而是「自己就是設計者」</li>
-  <li><strong>程式碼級溝通：</strong>5 年 Java 後端開發經驗，能閱讀系統程式碼、追蹤資料流、精準評估技術可行性與開發工時，與工程團隊零翻譯成本</li>
-  <li><strong>自動化測試體系：</strong>親手搭建 Python/Node.js 自動化 QA 框架，涵蓋 API 正確性、統計驗證、回歸測試，不依賴 QA 團隊也能保證品質</li>
-  <li><strong>技術風險預判：</strong>能在需求階段識別技術瓶頸（並發、資料一致性、架構擴展性），避免開發中途踩坑</li>
-  <li><strong>DevOps 理解：</strong>熟悉 CI/CD、Docker、Jenkins 部署流程，能評估從開發到上線的完整技術鏈路</li>
+  <li><strong><span data-zh="複雜商業邏輯演算法設計：" data-en="Complex Business Logic Algorithm Design:">複雜商業邏輯演算法設計：</span></strong><span data-zh="親自設計多層級規則引擎、動態分層計算、觸發邏輯與閾值控制，不是「提需求給研發」，而是「自己就是設計者」" data-en="Personally designed multi-tier rule engines, dynamic layered calculations, trigger logic, and threshold controls — not &quot;writing tickets for engineering,&quot; but being the designer myself.">親自設計多層級規則引擎、動態分層計算、觸發邏輯與閾值控制，不是「提需求給研發」，而是「自己就是設計者」</span></li>
+  <li><strong><span data-zh="程式碼級溝通：" data-en="Code-Level Communication:">程式碼級溝通：</span></strong><span data-zh="5 年 Java 後端開發經驗，能閱讀系統程式碼、追蹤資料流、精準評估技術可行性與開發工時，與工程團隊零翻譯成本" data-en="5 years of Java backend development — able to read system code, trace data flows, accurately assess technical feasibility and estimates, and communicate with engineering teams without any translation overhead.">5 年 Java 後端開發經驗，能閱讀系統程式碼、追蹤資料流、精準評估技術可行性與開發工時，與工程團隊零翻譯成本</span></li>
+  <li><strong><span data-zh="自動化測試體系：" data-en="Automated Testing Framework:">自動化測試體系：</span></strong><span data-zh="親手搭建 Python/Node.js 自動化 QA 框架，涵蓋 API 正確性、統計驗證、回歸測試，不依賴 QA 團隊也能保證品質" data-en="Personally built Python/Node.js automated QA frameworks covering API correctness, statistical validation, and regression testing — ensuring quality without relying solely on a QA team.">親手搭建 Python/Node.js 自動化 QA 框架，涵蓋 API 正確性、統計驗證、回歸測試，不依賴 QA 團隊也能保證品質</span></li>
+  <li><strong><span data-zh="技術風險預判：" data-en="Technical Risk Anticipation:">技術風險預判：</span></strong><span data-zh="能在需求階段識別技術瓶頸（並發、資料一致性、架構擴展性），避免開發中途踩坑" data-en="Identifies technical bottlenecks (concurrency, data consistency, architectural scalability) at the requirements stage — preventing mid-development surprises.">能在需求階段識別技術瓶頸（並發、資料一致性、架構擴展性），避免開發中途踩坑</span></li>
+  <li><strong><span data-zh="DevOps 理解：" data-en="DevOps Understanding:">DevOps 理解：</span></strong><span data-zh="熟悉 CI/CD、Docker、Jenkins 部署流程，能評估從開發到上線的完整技術鏈路" data-en="Proficient in CI/CD, Docker, and Jenkins deployment workflows — able to evaluate the complete technical pipeline from development to production.">熟悉 CI/CD、Docker、Jenkins 部署流程，能評估從開發到上線的完整技術鏈路</span></li>
 </ul>
-<blockquote>這意味著：我做產品決策時，不只考慮「使用者要什麼」，還能同時考慮「技術能不能做、要多久、風險在哪」。</blockquote>
+<blockquote><span data-zh="這意味著：我做產品決策時，不只考慮「使用者要什麼」，還能同時考慮「技術能不能做、要多久、風險在哪」。" data-en="This means: when I make product decisions, I don't just consider &quot;what users want&quot; — I simultaneously evaluate &quot;can it be built, how long will it take, and where are the risks.&quot;">這意味著：我做產品決策時，不只考慮「使用者要什麼」，還能同時考慮「技術能不能做、要多久、風險在哪」。</span></blockquote>
 </div>
 
 <!-- ── Work Experience ── -->
 <div class="section-alt" style="margin-top:4px">
-<h2 style="page-break-before:always">工作經歷</h2>
+<h2 style="page-break-before:always"><span data-zh="工作經歷" data-en="Work Experience">工作經歷</span></h2>
 
 <div class="job" style="page-break-inside:avoid">
   <div class="job-header">
-    <div class="job-title">台灣區專案總經理</div>
-    <div class="job-company">馬來西亞科技集團</div>
-    <div class="job-date">2025/02 - 2026/04 ｜ 管理 25 人團隊</div>
+    <div class="job-title"><span data-zh="台灣區專案總經理" data-en="Taiwan Regional Project General Manager">台灣區專案總經理</span></div>
+    <div class="job-company"><span data-zh="馬來西亞科技集團" data-en="Malaysian Technology Group">馬來西亞科技集團</span></div>
+    <div class="job-date"><span data-zh="2025/02 - 2026/04 ｜ 管理 25 人團隊" data-en="2025/02 - 2026/04 ｜ Managing a team of 25">2025/02 - 2026/04 ｜ 管理 25 人團隊</span></div>
   </div>
-  <p>負責多條系統產品線的整體規劃與團隊搭建，從零組建產品團隊並推動多個專案同步落地。</p>
-  <div class="job-sub">產品與系統設計</div>
+  <p><span data-zh="負責多條系統產品線的整體規劃與團隊搭建，從零組建產品團隊並推動多個專案同步落地。" data-en="Responsible for overall planning and team building across multiple product lines, assembling the product team from scratch and driving simultaneous delivery of multiple projects.">負責多條系統產品線的整體規劃與團隊搭建，從零組建產品團隊並推動多個專案同步落地。</span></p>
+  <div class="job-sub"><span data-zh="產品與系統設計" data-en="Product & System Design">產品與系統設計</span></div>
   <ul>
-    <li>主導核心系統機制設計：多層級規則引擎、動態分層計算、複雜商業邏輯演算法</li>
-    <li>設計差異化產品矩陣，協助品牌方建立清晰的產品定位</li>
-    <li>規劃保底機制與觸發邏輯，平衡用戶體驗與平台商業目標</li>
+    <li><span data-zh="主導核心系統機制設計：多層級規則引擎、動態分層計算、複雜商業邏輯演算法" data-en="Led core system mechanism design: multi-tier rule engines, dynamic layered calculations, and complex business logic algorithms.">主導核心系統機制設計：多層級規則引擎、動態分層計算、複雜商業邏輯演算法</span></li>
+    <li><span data-zh="設計差異化產品矩陣，協助品牌方建立清晰的產品定位" data-en="Designed a differentiated product matrix to help brand partners establish clear product positioning.">設計差異化產品矩陣，協助品牌方建立清晰的產品定位</span></li>
+    <li><span data-zh="規劃保底機制與觸發邏輯，平衡用戶體驗與平台商業目標" data-en="Designed guarantee mechanisms and trigger logic to balance user experience with platform business objectives.">規劃保底機制與觸發邏輯，平衡用戶體驗與平台商業目標</span></li>
   </ul>
-  <div class="job-sub">團隊建設與管理</div>
+  <div class="job-sub"><span data-zh="團隊建設與管理" data-en="Team Building & Management">團隊建設與管理</span></div>
   <ul>
-    <li>從 0 搭建 25 人團隊：職位規劃、JD 撰寫、面試評估、人員配置一手包辦</li>
-    <li>同時管理多條產品線，橫跨前端、後端、QA、企劃，明確里程碑與驗收標準</li>
-    <li>培養新進 PM/QA，建立標準化工作流程與思考框架</li>
+    <li><span data-zh="從 0 搭建 25 人團隊：職位規劃、JD 撰寫、面試評估、人員配置一手包辦" data-en="Built a 25-person team from scratch: handled role planning, job description writing, interview evaluation, and staffing allocation end-to-end.">從 0 搭建 25 人團隊：職位規劃、JD 撰寫、面試評估、人員配置一手包辦</span></li>
+    <li><span data-zh="同時管理多條產品線，橫跨前端、後端、QA、企劃，明確里程碑與驗收標準" data-en="Simultaneously managed multiple product lines spanning frontend, backend, QA, and planning, with clearly defined milestones and acceptance criteria.">同時管理多條產品線，橫跨前端、後端、QA、企劃，明確里程碑與驗收標準</span></li>
+    <li><span data-zh="培養新進 PM/QA，建立標準化工作流程與思考框架" data-en="Mentored incoming PMs and QA engineers, establishing standardized workflows and thinking frameworks.">培養新進 PM/QA，建立標準化工作流程與思考框架</span></li>
   </ul>
-  <div class="job-sub">效率與品質提升</div>
+  <div class="job-sub"><span data-zh="效率與品質提升" data-en="Efficiency & Quality Improvement">效率與品質提升</span></div>
   <ul>
-    <li>導入 Python/Node.js 自動化測試，建立可視化 Dashboard，QA 效率提升 40%</li>
-    <li>優化版本驗收流程，線上回歸 Bug 率降低 60%</li>
+    <li><span data-zh="導入 Python/Node.js 自動化測試，建立可視化 Dashboard，QA 效率提升 40%" data-en="Introduced Python/Node.js automated testing and built a visual dashboard, improving QA efficiency by 40%.">導入 Python/Node.js 自動化測試，建立可視化 Dashboard，QA 效率提升 40%</span></li>
+    <li><span data-zh="優化版本驗收流程，線上回歸 Bug 率降低 60%" data-en="Optimized the release acceptance process, reducing production regression bug rates by 60%.">優化版本驗收流程，線上回歸 Bug 率降低 60%</span></li>
   </ul>
-  <div class="job-sub">跨國協作</div>
+  <div class="job-sub"><span data-zh="跨國協作" data-en="Cross-Border Collaboration">跨國協作</span></div>
   <ul>
-    <li>擔任品牌方與技術端橋梁，將模糊需求轉化為可執行規格</li>
-    <li>管理台灣與海外團隊的遠端協作，確保多時區專案如期交付</li>
+    <li><span data-zh="擔任品牌方與技術端橋梁，將模糊需求轉化為可執行規格" data-en="Served as the bridge between brand partners and the technical team, translating ambiguous requirements into actionable specifications.">擔任品牌方與技術端橋梁，將模糊需求轉化為可執行規格</span></li>
+    <li><span data-zh="管理台灣與海外團隊的遠端協作，確保多時區專案如期交付" data-en="Managed remote collaboration between Taiwan and overseas teams, ensuring on-time delivery across multiple time zones.">管理台灣與海外團隊的遠端協作，確保多時區專案如期交付</span></li>
   </ul>
 </div>
 
 <div class="job" style="page-break-inside:avoid">
   <div class="job-header">
-    <div class="job-title">高級產品經理</div>
-    <div class="job-company">巨甚科技</div>
+    <div class="job-title"><span data-zh="高級產品經理" data-en="Senior Product Manager">高級產品經理</span></div>
+    <div class="job-company"><span data-zh="巨甚科技" data-en="Jushen Technology">巨甚科技</span></div>
     <div class="job-date">2024/05 - 2025/01</div>
   </div>
-  <p>負責多款數位產品從 0→1 的完整產品規劃與落地執行。</p>
+  <p><span data-zh="負責多款數位產品從 0→1 的完整產品規劃與落地執行。" data-en="Responsible for end-to-end product planning and execution for multiple digital products from 0 to 1.">負責多款數位產品從 0→1 的完整產品規劃與落地執行。</span></p>
   <ul>
-    <li>主導需求訪談、功能定義、流程設計與 MVP 拆解，產出標準化 PRD</li>
-    <li>使用 Axure 製作高保真原型，作為跨部門溝通標準</li>
-    <li>撰寫完整 PRD（User Story / Flow / Edge Case / 驗收條件），開發理解偏差降低 60%</li>
-    <li>規劃 Sprint/Milestone 版本節奏，協調前後端、QA 與營運排程</li>
-    <li>主導 UAT 驗收，定義測試案例並確保功能符合商業需求</li>
-    <li>追蹤進度與風險，提前識別時程衝突並提出調整方案</li>
+    <li><span data-zh="主導需求訪談、功能定義、流程設計與 MVP 拆解，產出標準化 PRD" data-en="Led requirements interviews, feature definition, process design, and MVP decomposition, producing standardized PRDs.">主導需求訪談、功能定義、流程設計與 MVP 拆解，產出標準化 PRD</span></li>
+    <li><span data-zh="使用 Axure 製作高保真原型，作為跨部門溝通標準" data-en="Created high-fidelity prototypes in Axure as the cross-department communication standard.">使用 Axure 製作高保真原型，作為跨部門溝通標準</span></li>
+    <li><span data-zh="撰寫完整 PRD（User Story / Flow / Edge Case / 驗收條件），開發理解偏差降低 60%" data-en="Wrote comprehensive PRDs (User Stories / Flows / Edge Cases / Acceptance Criteria), reducing development misalignment by 60%.">撰寫完整 PRD（User Story / Flow / Edge Case / 驗收條件），開發理解偏差降低 60%</span></li>
+    <li><span data-zh="規劃 Sprint/Milestone 版本節奏，協調前後端、QA 與營運排程" data-en="Planned Sprint/Milestone release cadences and coordinated scheduling across frontend, backend, QA, and operations.">規劃 Sprint/Milestone 版本節奏，協調前後端、QA 與營運排程</span></li>
+    <li><span data-zh="主導 UAT 驗收，定義測試案例並確保功能符合商業需求" data-en="Led UAT acceptance, defining test cases and ensuring features met business requirements.">主導 UAT 驗收，定義測試案例並確保功能符合商業需求</span></li>
+    <li><span data-zh="追蹤進度與風險，提前識別時程衝突並提出調整方案" data-en="Tracked progress and risks, proactively identifying schedule conflicts and proposing mitigation plans.">追蹤進度與風險，提前識別時程衝突並提出調整方案</span></li>
   </ul>
 </div>
 
 <div class="job" style="page-break-inside:avoid">
   <div class="job-header">
-    <div class="job-title">高級產品經理</div>
-    <div class="job-company">ST 科技（台灣）</div>
+    <div class="job-title"><span data-zh="高級產品經理" data-en="Senior Product Manager">高級產品經理</span></div>
+    <div class="job-company"><span data-zh="ST 科技（台灣）" data-en="ST Technology (Taiwan)">ST 科技（台灣）</span></div>
     <div class="job-date">2023/09 - 2024/04</div>
   </div>
-  <p>負責數位產品的 Roadmap 規劃與跨部門整合。</p>
+  <p><span data-zh="負責數位產品的 Roadmap 規劃與跨部門整合。" data-en="Responsible for digital product roadmap planning and cross-department integration.">負責數位產品的 Roadmap 規劃與跨部門整合。</span></p>
   <ul>
-    <li>將商業目標拆解為可執行功能模組，建立需求評估機制（商業價值 × 開發成本 × 風險）</li>
-    <li>設計產品流程圖、Wireframe 與 Prototype，作為開發依據</li>
-    <li>主導跨部門會議，整合營運、技術、客服等單位意見</li>
-    <li>建立標準化 PRD 與驗收模板，團隊開發效率提升 30%</li>
-    <li>參與產品上線後數據觀察與使用者回饋，驅動持續優化</li>
+    <li><span data-zh="將商業目標拆解為可執行功能模組，建立需求評估機制（商業價值 × 開發成本 × 風險）" data-en="Decomposed business objectives into executable feature modules and established a requirements scoring mechanism (business value × development cost × risk).">將商業目標拆解為可執行功能模組，建立需求評估機制（商業價值 × 開發成本 × 風險）</span></li>
+    <li><span data-zh="設計產品流程圖、Wireframe 與 Prototype，作為開發依據" data-en="Designed product flowcharts, wireframes, and prototypes as the basis for development.">設計產品流程圖、Wireframe 與 Prototype，作為開發依據</span></li>
+    <li><span data-zh="主導跨部門會議，整合營運、技術、客服等單位意見" data-en="Led cross-department meetings, integrating input from operations, technology, and customer service.">主導跨部門會議，整合營運、技術、客服等單位意見</span></li>
+    <li><span data-zh="建立標準化 PRD 與驗收模板，團隊開發效率提升 30%" data-en="Established standardized PRD and acceptance templates, improving team development efficiency by 30%.">建立標準化 PRD 與驗收模板，團隊開發效率提升 30%</span></li>
+    <li><span data-zh="參與產品上線後數據觀察與使用者回饋，驅動持續優化" data-en="Participated in post-launch data analysis and user feedback collection to drive continuous improvement.">參與產品上線後數據觀察與使用者回饋，驅動持續優化</span></li>
   </ul>
 </div>
 
 <div class="job" style="page-break-inside:avoid">
   <div class="job-header">
-    <div class="job-title">創辦人 / CEO</div>
-    <div class="job-company">銀月數位顧問（台灣）</div>
+    <div class="job-title"><span data-zh="創辦人 / CEO" data-en="Founder / CEO">創辦人 / CEO</span></div>
+    <div class="job-company"><span data-zh="銀月數位顧問（台灣）" data-en="Silver Moon Digital Consulting (Taiwan)">銀月數位顧問（台灣）</span></div>
     <div class="job-date">2021/05 - 2023/09</div>
   </div>
-  <p>自營系統開發公司，主導多款管理系統與數位產品的規劃與交付。</p>
-  <div class="job-sub">代表專案</div>
+  <p><span data-zh="自營系統開發公司，主導多款管理系統與數位產品的規劃與交付。" data-en="Self-operated software development firm, leading the planning and delivery of multiple management systems and digital products.">自營系統開發公司，主導多款管理系統與數位產品的規劃與交付。</span></p>
+  <div class="job-sub"><span data-zh="代表專案" data-en="Key Projects">代表專案</span></div>
   <ul>
-    <li>CityPoker 會員管理系統 — 賽事管理、獎金計算、會員積分，線上運行中</li>
-    <li>58Poker 棋牌系統 — 從架構設計到上線部署的完整產品負責人</li>
-    <li>調查局毒品管理系統（線上運行中）</li>
-    <li>永豐銀行財稅稽查系統（線上運行中）</li>
-    <li>舒芙亞連鎖美業客戶管理系統（線上運行中）</li>
+    <li><span data-zh="CityPoker 會員管理系統 — 賽事管理、獎金計算、會員積分，線上運行中" data-en="CityPoker Member Management System — tournament management, prize calculation, member points. Live in production.">CityPoker 會員管理系統 — 賽事管理、獎金計算、會員積分，線上運行中</span></li>
+    <li><span data-zh="58Poker 棋牌系統 — 從架構設計到上線部署的完整產品負責人" data-en="58Poker Card Game System — full product ownership from architecture design to live deployment.">58Poker 棋牌系統 — 從架構設計到上線部署的完整產品負責人</span></li>
+    <li><span data-zh="調查局毒品管理系統（線上運行中）" data-en="Investigation Bureau Drug Management System (live in production)">調查局毒品管理系統（線上運行中）</span></li>
+    <li><span data-zh="永豐銀行財稅稽查系統（線上運行中）" data-en="Sinopac Bank Tax Audit System (live in production)">永豐銀行財稅稽查系統（線上運行中）</span></li>
+    <li><span data-zh="舒芙亞連鎖美業客戶管理系統（線上運行中）" data-en="Suvia Beauty Chain Customer Management System (live in production)">舒芙亞連鎖美業客戶管理系統（線上運行中）</span></li>
   </ul>
-  <p style="margin-top:6px;">管理：公司營運、團隊招募、專案管理、客戶溝通、新業務拓展</p>
+  <p style="margin-top:6px;"><span data-zh="管理：公司營運、團隊招募、專案管理、客戶溝通、新業務拓展" data-en="Management scope: company operations, team recruitment, project management, client communication, and new business development.">管理：公司營運、團隊招募、專案管理、客戶溝通、新業務拓展</span></p>
 </div>
 
 <div class="job" style="page-break-inside:avoid">
   <div class="job-header">
-    <div class="job-title">Java 後端工程師（5 年）</div>
-    <div class="job-company">台灣各大企業</div>
+    <div class="job-title"><span data-zh="Java 後端工程師（5 年）" data-en="Java Backend Engineer (5 Years)">Java 後端工程師（5 年）</span></div>
+    <div class="job-company"><span data-zh="台灣各大企業" data-en="Major Enterprises in Taiwan">台灣各大企業</span></div>
     <div class="job-date">2016/01 - 2021/04</div>
   </div>
   <ul>
-    <li>金融業：中國信託、永豐商銀 ｜ 電信業：遠通集團、台灣大集團 ｜ 政府：健保案、軍方系統</li>
-    <li>負責後端系統架構設計與開發，主導多個企業級產品技術實現</li>
-    <li>完成從「純技術」到「技術管理」的轉型，為後續產品管理角色奠定基礎</li>
+    <li><span data-zh="金融業：中國信託、永豐商銀 ｜ 電信業：遠通集團、台灣大集團 ｜ 政府：健保案、軍方系統" data-en="Finance: Cathay United Bank, Sinopac Bank ｜ Telecom: Far EasTone Group, Taiwan Mobile Group ｜ Government: NHI projects, military systems">金融業：中國信託、永豐商銀 ｜ 電信業：遠通集團、台灣大集團 ｜ 政府：健保案、軍方系統</span></li>
+    <li><span data-zh="負責後端系統架構設計與開發，主導多個企業級產品技術實現" data-en="Responsible for backend system architecture design and development, leading technical implementation of multiple enterprise-grade products.">負責後端系統架構設計與開發，主導多個企業級產品技術實現</span></li>
+    <li><span data-zh="完成從「純技術」到「技術管理」的轉型，為後續產品管理角色奠定基礎" data-en="Completed the transition from pure individual contributor to technical leadership, establishing the foundation for subsequent product management roles.">完成從「純技術」到「技術管理」的轉型，為後續產品管理角色奠定基礎</span></li>
   </ul>
 </div>
 </div>
 
 <!-- ── Agile ── -->
-<h2>敏捷開發實踐</h2>
-<p class="scrum-desc">在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：</p>
+<h2><span data-zh="敏捷開發實踐" data-en="Agile Practices">敏捷開發實踐</span></h2>
+<p class="scrum-desc"><span data-zh="在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：" data-en="Introduced and practiced agile development methodologies across multiple projects, establishing standardized workflows to improve team efficiency:">在多個專案中導入並實踐敏捷開發方法，建立標準化流程提升團隊效率：</span></p>
 <div class="scrum-grid">
-  <div class="scrum-card"><strong>Sprint 規劃</strong>按雙週迭代拆解需求，明確驗收標準</div>
-  <div class="scrum-card"><strong>Milestone 管控</strong>多條產品線並行，里程碑追蹤確保如期交付</div>
-  <div class="scrum-card"><strong>標準化 PRD</strong>User Story / Flow / Edge Case / 驗收條件</div>
-  <div class="scrum-card"><strong>UAT 驗收</strong>定義測試案例，功能符合商業需求才放行</div>
-  <div class="scrum-card"><strong>需求評估機制</strong>商業價值 × 開發成本 × 風險三維評分</div>
-  <div class="scrum-card"><strong>持續優化</strong>上線後數據觀察與使用者回饋驅動迭代</div>
+  <div class="scrum-card"><strong><span data-zh="Sprint 規劃" data-en="Sprint Planning">Sprint 規劃</span></strong><span data-zh="按雙週迭代拆解需求，明確驗收標準" data-en="Bi-weekly iteration decomposition with clearly defined acceptance criteria">按雙週迭代拆解需求，明確驗收標準</span></div>
+  <div class="scrum-card"><strong><span data-zh="Milestone 管控" data-en="Milestone Tracking">Milestone 管控</span></strong><span data-zh="多條產品線並行，里程碑追蹤確保如期交付" data-en="Parallel multi-product line management with milestone tracking for on-time delivery">多條產品線並行，里程碑追蹤確保如期交付</span></div>
+  <div class="scrum-card"><strong><span data-zh="標準化 PRD" data-en="Standardized PRD">標準化 PRD</span></strong><span data-zh="User Story / Flow / Edge Case / 驗收條件" data-en="User Story / Flow / Edge Case / Acceptance Criteria">User Story / Flow / Edge Case / 驗收條件</span></div>
+  <div class="scrum-card"><strong><span data-zh="UAT 驗收" data-en="UAT Acceptance">UAT 驗收</span></strong><span data-zh="定義測試案例，功能符合商業需求才放行" data-en="Defined test cases; features released only upon verified business requirement compliance">定義測試案例，功能符合商業需求才放行</span></div>
+  <div class="scrum-card"><strong><span data-zh="需求評估機制" data-en="Requirements Scoring">需求評估機制</span></strong><span data-zh="商業價值 × 開發成本 × 風險三維評分" data-en="Three-dimensional scoring: business value × development cost × risk">商業價值 × 開發成本 × 風險三維評分</span></div>
+  <div class="scrum-card"><strong><span data-zh="持續優化" data-en="Continuous Improvement">持續優化</span></strong><span data-zh="上線後數據觀察與使用者回饋驅動迭代" data-en="Post-launch data observation and user feedback driving iterative improvement">上線後數據觀察與使用者回饋驅動迭代</span></div>
 </div>
 
 <!-- ── Core Competency Table ── -->
 <div class="section-alt">
-<h2>核心能力對照</h2>
+<h2><span data-zh="核心能力對照" data-en="Core Competencies">核心能力對照</span></h2>
 <table>
-  <thead><tr><th>能力項目</th><th>我的具體經驗</th></tr></thead>
+  <thead><tr><th><span data-zh="能力項目" data-en="Competency">能力項目</span></th><th><span data-zh="我的具體經驗" data-en="My Specific Experience">我的具體經驗</span></th></tr></thead>
   <tbody>
-    <tr><td>7 年以上產品管理</td><td>✅ 7 年（2019 至今），橫跨企業級與數位產品</td></tr>
-    <tr><td>複雜系統設計</td><td>✅ 多層規則引擎、演算法設計、動態計算邏輯全鏈路</td></tr>
-    <tr><td>團隊管理</td><td>✅ 三次從零搭建團隊（最大 30 人）</td></tr>
-    <tr><td>JIRA / Confluence / Trello</td><td>✅ 日常使用 + Axure / Miro / Figma</td></tr>
-    <tr><td>數據分析驅動</td><td>✅ 自建 Dashboard、使用者行為分析、A/B 測試設計</td></tr>
-    <tr><td>跨部門協調</td><td>✅ 跨國（台 / 菲 / 馬）、跨部門（研發 / 營運 / 品牌）</td></tr>
-    <tr><td>已上線案例</td><td>✅ HEY!BOSS / RMRS / CityPoker / 58Poker 多套運行中</td></tr>
-    <tr><td>敏捷開發</td><td>✅ Sprint / Milestone / PRD 標準化</td></tr>
+    <tr><td><span data-zh="7 年以上產品管理" data-en="7+ Years Product Management">7 年以上產品管理</span></td><td><span data-zh="✅ 7 年（2019 至今），橫跨企業級與數位產品" data-en="✅ 7 years (2019–present), spanning enterprise and digital products">✅ 7 年（2019 至今），橫跨企業級與數位產品</span></td></tr>
+    <tr><td><span data-zh="複雜系統設計" data-en="Complex System Design">複雜系統設計</span></td><td><span data-zh="✅ 多層規則引擎、演算法設計、動態計算邏輯全鏈路" data-en="✅ Multi-tier rule engines, algorithm design, dynamic calculation logic — full stack">✅ 多層規則引擎、演算法設計、動態計算邏輯全鏈路</span></td></tr>
+    <tr><td><span data-zh="團隊管理" data-en="Team Leadership">團隊管理</span></td><td><span data-zh="✅ 三次從零搭建團隊（最大 30 人）" data-en="✅ Three times built teams from scratch (up to 30 people)">✅ 三次從零搭建團隊（最大 30 人）</span></td></tr>
+    <tr><td><span data-zh="JIRA / Confluence / Trello" data-en="JIRA / Confluence / Trello">JIRA / Confluence / Trello</span></td><td><span data-zh="✅ 日常使用 + Axure / Miro / Figma" data-en="✅ Daily use + Axure / Miro / Figma">✅ 日常使用 + Axure / Miro / Figma</span></td></tr>
+    <tr><td><span data-zh="數據分析驅動" data-en="Data-Driven Analysis">數據分析驅動</span></td><td><span data-zh="✅ 自建 Dashboard、使用者行為分析、A/B 測試設計" data-en="✅ Custom dashboards, user behavior analysis, A/B test design">✅ 自建 Dashboard、使用者行為分析、A/B 測試設計</span></td></tr>
+    <tr><td><span data-zh="跨部門協調" data-en="Cross-Department Coordination">跨部門協調</span></td><td><span data-zh="✅ 跨國（台 / 菲 / 馬）、跨部門（研發 / 營運 / 品牌）" data-en="✅ Cross-border (Taiwan / Philippines / Malaysia), cross-department (R&amp;D / Operations / Brand)">✅ 跨國（台 / 菲 / 馬）、跨部門（研發 / 營運 / 品牌）</span></td></tr>
+    <tr><td><span data-zh="已上線案例" data-en="Live Production Projects">已上線案例</span></td><td><span data-zh="✅ HEY!BOSS / RMRS / CityPoker / 58Poker 多套運行中" data-en="✅ HEY!BOSS / RMRS / CityPoker / 58Poker — multiple systems in production">✅ HEY!BOSS / RMRS / CityPoker / 58Poker 多套運行中</span></td></tr>
+    <tr><td><span data-zh="敏捷開發" data-en="Agile Development">敏捷開發</span></td><td><span data-zh="✅ Sprint / Milestone / PRD 標準化" data-en="✅ Sprint / Milestone / Standardized PRD">✅ Sprint / Milestone / PRD 標準化</span></td></tr>
   </tbody>
 </table>
 </div>
 
 <!-- ── Tools ── -->
-<h2>工具</h2>
+<h2><span data-zh="工具" data-en="Tools">工具</span></h2>
 <table>
-  <thead><tr><th>類別</th><th>工具</th></tr></thead>
+  <thead><tr><th><span data-zh="類別" data-en="Category">類別</span></th><th><span data-zh="工具" data-en="Tools">工具</span></th></tr></thead>
   <tbody>
-    <tr><td>專案管理</td><td>JIRA / Confluence / Trello / Notion</td></tr>
-    <tr><td>產品設計</td><td>Axure / Figma / Miro</td></tr>
-    <tr><td>數據分析</td><td>Google Sheets / SQL / 自建 Dashboard</td></tr>
-    <tr><td>協作</td><td>Slack / Telegram / Teams</td></tr>
-    <tr><td>技術理解</td><td>Java / Node.js / PostgreSQL / Docker / CI/CD</td></tr>
-    <tr><td>AI 工具</td><td>Claude Code / n8n / Obsidian Second Brain</td></tr>
+    <tr><td><span data-zh="專案管理" data-en="Project Management">專案管理</span></td><td>JIRA / Confluence / Trello / Notion</td></tr>
+    <tr><td><span data-zh="產品設計" data-en="Product Design">產品設計</span></td><td>Axure / Figma / Miro</td></tr>
+    <tr><td><span data-zh="數據分析" data-en="Data Analysis">數據分析</span></td><td>Google Sheets / SQL / <span data-zh="自建 Dashboard" data-en="Custom Dashboard">自建 Dashboard</span></td></tr>
+    <tr><td><span data-zh="協作" data-en="Collaboration">協作</span></td><td>Slack / Telegram / Teams</td></tr>
+    <tr><td><span data-zh="技術理解" data-en="Technical Stack">技術理解</span></td><td>Java / Node.js / PostgreSQL / Docker / CI/CD</td></tr>
+    <tr><td><span data-zh="AI 工具" data-en="AI Tools">AI 工具</span></td><td>Claude Code / n8n / Obsidian Second Brain</td></tr>
   </tbody>
 </table>
 
 <!-- ── Education ── -->
 <div class="section-alt">
-<h2>教育 &amp; 證照</h2>
+<h2><span data-zh="教育 &amp; 證照" data-en="Education &amp; Certifications">教育 &amp; 證照</span></h2>
 <div class="edu-item">
-  <h3>亞東技術學院</h3>
-  <p>電子工程學系 ｜ 四技</p>
+  <h3><span data-zh="亞東技術學院" data-en="Oriental Institute of Technology">亞東技術學院</span></h3>
+  <p><span data-zh="電子工程學系 ｜ 四技" data-en="Department of Electronic Engineering ｜ Bachelor of Technology">電子工程學系 ｜ 四技</span></p>
 </div>
 <div class="edu-item" style="margin-top:16px">
-  <h3>證照</h3>
+  <h3><span data-zh="證照" data-en="Certifications">證照</span></h3>
   <p>SCJP（Sun Certified Java Programmer）</p>
 </div>
 <div class="edu-item" style="margin-top:16px">
-  <h3>語言</h3>
-  <p>中文（母語）｜ 英文（工作溝通）｜ 閩南語</p>
+  <h3><span data-zh="語言" data-en="Languages">語言</span></h3>
+  <p><span data-zh="中文（母語）｜ 英文（工作溝通）｜ 閩南語" data-en="Mandarin Chinese (Native) ｜ English (Professional Working Proficiency) ｜ Taiwanese Hokkien">中文（母語）｜ 英文（工作溝通）｜ 閩南語</span></p>
 </div>
 </div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-zh]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+  document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + lang).classList.add('active');
+}
+</script>
 
 </body>
 </html>
